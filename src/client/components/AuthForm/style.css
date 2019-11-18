@@ -1,0 +1,61 @@
+.login-form {
+    width: 360px;
+    margin: auto;
+}
+
+.login-form > * {
+    display: block;
+}
+
+.login-form > span {
+    text-align: center;
+}
+
+
+.login-form > button {
+    width: 320px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    margin: auto;
+    border: none; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-form > :not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.login-form > input {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    width: 360px;
+    height: 60px;
+
+    border: none;
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 100%;
+}
+
+.enter-btn {
+    background-color: rgb(167, 228, 169);
+    transition: 0.5s background-color;
+}
+.enter-btn:hover {
+    background-color: #7DED81;
+}
+
+.text {
+    font-size: 20px;
+    color: white;
+}
+
+.register-btn{
+    background-color: rgb(236, 172, 129);
+    transition: 0.5s background-color;
+}
+.register-btn:hover {
+    background-color: #EF8E4D;
+}
