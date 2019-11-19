@@ -6,7 +6,7 @@ import AuthForm from '../../components/AuthForm/index'
 import ContactInfo from '../../components/ContactInfo/index'
 
 
-function LoginPage() {
+function AuthPage() {
   return (
     <div className='page-login'>
 
@@ -42,4 +42,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default AuthPage;

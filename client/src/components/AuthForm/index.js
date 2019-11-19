@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css'
 
-
 function AuthForm() {
   return (
     <form  className='login-form'>
