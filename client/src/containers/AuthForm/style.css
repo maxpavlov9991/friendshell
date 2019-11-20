@@ -1,0 +1,77 @@
+.login-form {
+    width: 360px;
+    margin: auto;
+}
+
+.login-form > * {
+    display: block;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+ 
+button {
+    width: 320px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    margin: auto;
+    border: none; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login-form > :not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.login-form > input {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    width: 360px;
+    height: 60px;
+    outline: none;
+    border: none;
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 100%;
+}
+
+.login-fld::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.login-fld::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.login-fld:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.login-fld:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.login-fld:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.login-fld:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.login-fld:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.login-fld:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+.password-fld::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.password-fld::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.password-fld:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.password-fld:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.password-fld:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.password-fld:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.password-fld:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.password-fld:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+.enter-btn {
+    background-color: rgb(167, 228, 169);
+    transition: 0.5s background-color;
+}
+.enter-btn:hover {
+    background-color: #7DED81;
+}
+
+.register-btn {
+    background-color: rgb(236, 172, 129);
+    transition: 0.5s background-color;
+    display: block;
+}
+.register-btn:hover {
+    background-color: #EF8E4D;
+}
