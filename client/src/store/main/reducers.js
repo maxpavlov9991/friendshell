@@ -3,12 +3,12 @@ import {
     MAIN_CHANGE_TOURNAMENT_DESCRIBE,
 } from './actions'
 
-const defaultState = {
+const initialState = {
     tournamentName: '',
     tournamentDescribe: ''
 }
 
-export const mainReducer = (state = defaultState, action) => {
+export const mainReducer = (state = initialState, action) => {
     switch (action.type) {
         case MAIN_CHANGE_TOURNAMENT_NAME:
             return {

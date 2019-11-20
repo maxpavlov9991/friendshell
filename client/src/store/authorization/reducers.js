@@ -3,12 +3,13 @@ import {
     AUTH_CHANGE_PASSWORD_TEXT,
 } from './actions'
 
-const defaultState = {
-    login: '',
-    password: ''
+const initialState = {
+    login: 'initial login(check state)',
+    password: 'initial password(check state)',
+    email: 'initial email(check state)'
 }
 
-export const authorizationReducer = (state = defaultState, action) => {
+export const authorizationReducer = (state = initialState, action) => {
     switch (action.type) {
         case AUTH_CHANGE_LOGIN_TEXT:
             return {

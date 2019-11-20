@@ -4,13 +4,13 @@ import {
     REGISTRATION_CHANGE_PASSWORD_TEXT
 } from './actions'
 
-const defaultState = {
+const initialState = {
     login: '',
     email: '',
     password: ''
 }
 
-export const registrationReducer = (state = defaultState, action) => {
+export const registrationReducer = (state = initialState, action) => {
     switch (action.type) {
         case REGISTRATION_CHANGE_LOGIN_TEXT:
             return {

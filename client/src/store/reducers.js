@@ -5,8 +5,8 @@ import { registrationReducer } from './registration/reducers'
 import { mainReducer } from './main/reducers'
 
 const rootReducer = combineReducers({
-  authorization: authorizationReducer,
-  registration: registrationReducer,
+  auth: authorizationReducer,
+  reg: registrationReducer,
   main: mainReducer
 })
 
