@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './style.css'
 
@@ -8,10 +8,11 @@ class AuthForm extends Component {
   constructor(props) {
     super(props)
 
-    this.handleLoginChange = this.handleLoginChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleLoginKeyDown = this.handleLoginKeyDown.bind(this);
-    this.handlePasswordKeyDown = this.handlePasswordKeyDown.bind(this);
+    this.handleLoginChange = this.handleLoginChange.bind(this)
+    this.handlePasswordChange = this.handlePasswordChange.bind(this)
+    this.handleLoginKeyDown = this.handleLoginKeyDown.bind(this)
+    this.handlePasswordKeyDown = this.handlePasswordKeyDown.bind(this)
+    this.handleEnter = this.handleEnter.bind(this)
   }
 
   componentDidMount() {
@@ -30,29 +31,31 @@ class AuthForm extends Component {
 
   handleLoginKeyDown(event){
     if (event.keyCode === 13) {
-      event.preventDefault();
       document.getElementById('password').focus()
     }
   }
 
   handlePasswordKeyDown(event){
     if (event.keyCode === 13) {
-
-      document.getElementById('form').submit()
+      this.handleEnter()
     }
+  }
+
+  handleEnter(event){
+    
   }
 
   //ref attributes
   render() {
     return (
       <div>
-        <form id='form' className='login-form'>
+        <div id='form' className='login-form'>
           <input id='login' onKeyDown={this.handleLoginKeyDown} onChange={this.handleLoginChange} className='login-fld' type='login' placeholder='Login or e-mail' value={this.props.login}></input>
           <input id='password' onKeyDown={this.handlePasswordKeyDown} onChange={this.handlePasswordChange} className='password-fld' type='password' placeholder='Password' value={this.props.password}></input>
           <button type='' className='enter-btn'> Log in </button>
-        </form>
+        </div>
         <h3> If you haven't an account, please, register:</h3>
-        <button className='register-btn'> Sing up </button>
+        <button className='register-btn' onClick={this.handleEnter}> Sing up </button>
       </div>
     )
   }

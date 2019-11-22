@@ -4,9 +4,16 @@ import {
 } from './actions'
 
 const initialState = {
-    login: 'initial login(check state)',
-    password: 'initial password(check state)',
-    email: 'initial email(check state)'
+    auth: {
+        login: '',
+        password: '',
+        jwt: {
+            asdasd:'',
+            asddsa:''
+        }
+    },
+    hasErrored: false,
+    isLoading: false
 }
 
 export const authorizationReducer = (state = initialState, action) => {
