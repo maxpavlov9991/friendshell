@@ -7,6 +7,10 @@
 .form > * {
     display: block;
 }
+
+.form span[class='important'] {
+    color: rgb(167, 228, 169)!important;
+}
  
 button {
     display: block;
