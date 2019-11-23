@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import './style.css'
 
-import { setLoginText, setPasswordText } from '../../store/authorization/actions'
+import {
+  changeLoginText,
+  changePasswordText,
+  changeThunkHasErrored,
+  changeThunkIsLoading
+} from '../../store/authorization/actions'
 
 class AuthForm extends Component {
   constructor(props) {
@@ -10,8 +16,7 @@ class AuthForm extends Component {
 
     this.handleLoginChange = this.handleLoginChange.bind(this)
     this.handlePasswordChange = this.handlePasswordChange.bind(this)
-    this.handleLoginKeyDown = this.handleLoginKeyDown.bind(this)
-    this.handlePasswordKeyDown = this.handlePasswordKeyDown.bind(this)
+    this.handleKeyDown = this.handleKeyDown.bind(this)
     this.handleEnter = this.handleEnter.bind(this)
   }
 
@@ -22,40 +27,77 @@ class AuthForm extends Component {
   }
 
   handleLoginChange(event) {
-    this.props.setLoginText(event.target.value)
+    this.props.changeLoginText(event.target.value)
   }
 
   handlePasswordChange(event) {
-    this.props.setPasswordText(event.target.value)
+    this.props.changePasswordText(event.target.value)
   }
 
-  handleLoginKeyDown(event){
+  handleKeyDown(event) {
+    console.log(event.keyCode)
     if (event.keyCode === 13) {
-      document.getElementById('password').focus()
+      switch (event.target) {
+        case this.loginInput:
+          this.passwordInput.focus()
+          break
+        case this.passwordInput:
+          this.handleEnter()
+          break
+        default:
+          break
+      }
     }
   }
 
-  handlePasswordKeyDown(event){
-    if (event.keyCode === 13) {
-      this.handleEnter()
-    }
-  }
-
-  handleEnter(event){
-    
+  handleEnter(event) {
+    console.log('ENTER!!')
   }
 
   //ref attributes
   render() {
+    let message = ''
+
+    if (this.props.hasErrored) {
+      message = 'ERROR'
+    }
+
+    if (this.props.isLoading) {
+      message = 'is loading....'
+    }
+
     return (
-      <div>
-        <div id='form' className='login-form'>
-          <input id='login' onKeyDown={this.handleLoginKeyDown} onChange={this.handleLoginChange} className='login-fld' type='login' placeholder='Login or e-mail' value={this.props.login}></input>
-          <input id='password' onKeyDown={this.handlePasswordKeyDown} onChange={this.handlePasswordChange} className='password-fld' type='password' placeholder='Password' value={this.props.password}></input>
-          <button type='' className='enter-btn'> Log in </button>
-        </div>
+      <div
+        className='form'>
+        <p>{message}</p>
+        <h1>Account Log In</h1>
+        <h3>Please enter your account details below and click <span class='important'>Log in</span> button!</h3>
+        <h3>Login:</h3>
+        <input
+          ref={(loginInput) => { this.loginInput = loginInput }}
+          className='login-fld'
+          type='login'
+          placeholder='electroturtle123'
+          onKeyDown={this.handleKeyDown}
+          onChange={this.handleLoginChange}
+          value={this.props.login}></input>
+        <h3>Password:</h3>
+        <input
+          ref={(passwordInput) => { this.passwordInput = passwordInput }}
+          className='password-fld'
+          type='password'
+          placeholder='********'
+          onKeyDown={this.handleKeyDown}
+          onChange={this.handlePasswordChange}
+          value={this.props.password}></input>
+        <button
+          type=''
+          className='enter-btn'> Log In! </button>
         <h3> If you haven't an account, please, register:</h3>
-        <button className='register-btn' onClick={this.handleEnter}> Sing up </button>
+        <Link
+          to='/register'
+          className='register-btn'
+          onClick={this.handleEnter}>Create an account</Link>
       </div>
     )
   }
@@ -65,17 +107,24 @@ export default connect(
   (state) => {
     return {
       login: state.auth.login,
-      email: state.auth.email,
-      password: state.auth.password
+      password: state.auth.password,
+      hasErrored: state.auth.thunk.hasErrored,
+      isLoading: state.auth.thunk.isLoading
     }
   },
   (dispatch) => {
     return {
-      setLoginText: (login) => {
-        dispatch(setLoginText(login))
+      changeLoginText: (login) => {
+        dispatch(changeLoginText(login))
       },
-      setPasswordText: (password) => {
-        dispatch(setPasswordText(password))
+      changePasswordText: (password) => {
+        dispatch(changePasswordText(password))
+      },
+      changeThunkHasErrored: () => {
+        dispatch(changeThunkHasErrored())
+      },
+      changeThunkIsLoading: () => {
+        dispatch(changeThunkIsLoading())
       }
     }
   })(AuthForm)

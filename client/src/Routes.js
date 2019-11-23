@@ -15,7 +15,7 @@ export default () => (
   <Provider store={store}>
     <Router history={history} basename="/">
         <Switch>
-          <Route exact path="/" component={AuthPage}/>
+          <Route path="/" component={AuthPage}/>
           <Route path="/main" component={MainPage}/>
         </Switch>
     </Router>
