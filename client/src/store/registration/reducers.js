@@ -1,12 +1,12 @@
 import {
     REGISTRATION_SET_STATUS_IS_LOADING,
-    REGISTRATION_SET_STATUS_HAS_ERRORED,
+    REGISTRATION_SET_STATUS_FAILED,
     REGISTRATION_SET_STATUS_NORMAL,
     REGISTRATION_SET_MESSAGE
 } from './actions'
 
 const initialState = {
-    status: 'normal',
+    status: '',
     message: ''
 }
 
@@ -15,17 +15,17 @@ export const registrationReducer = (state = initialState, action) => {
         case REGISTRATION_SET_STATUS_IS_LOADING:
             return {
                 ...state,
-                status: 'isLoading'
+                status: 'Loading...'
             }
-        case REGISTRATION_SET_STATUS_HAS_ERRORED:
+        case REGISTRATION_SET_STATUS_FAILED:
             return {
                 ...state,
-                status: 'hasErrored'
+                status: 'Fail...'
             }
         case REGISTRATION_SET_STATUS_NORMAL:
             return {
                 ...state,
-                status: 'normal'
+                status: ''
             }
         case REGISTRATION_SET_MESSAGE:
             return {

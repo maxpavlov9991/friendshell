@@ -5,33 +5,42 @@ import './style.css'
 
 import {
   setStatusIsLoading,
-  setStatusHasErrored,
+  setStatusFailed,
   setStatusNormal,
   setMessage
 } from '../../store/authorization/actions'
+
+import {
+  userAuthSetMyInfo
+} from '../../store/user/actions'
 
 class AuthForm extends Component {
   constructor(props) {
     super(props)
 
     this.handleKeyDown = this.handleKeyDown.bind(this)
-    this.handleSignIn = this.handleSignIn.bind(this)
+    this.handleLogIn = this.handleLogIn.bind(this)
   }
 
   componentDidMount() {
   }
 
   componentWillUnmount() {
+    this.props.setMessage('')
+    this.props.setStatusNormal()
   }
 
   handleKeyDown(event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 || event.keyCode === 38 || event.keyCode === 40) {
       switch (event.target) {
         case this.loginInput:
-          this.passwordInput.focus()
+          if (event.keyCode === 13 || event.keyCode === 40) {this.passwordInput.focus()}
+          else {this.loginInput.blur()}
           break
         case this.passwordInput:
-          this.handleEnter()
+            if (event.keyCode === 13) {this.handleLogIn()}
+            else if (event.keyCode === 40) {this.passwordInput.blur()}
+            else {this.loginInput.focus()}
           break
         default:
           break
@@ -39,9 +48,8 @@ class AuthForm extends Component {
     }
   }
 
-  async handleSignIn(event){
+  async handleLogIn(event) {
     try {
-
       this.props.setMessage('')
       this.props.setStatusIsLoading()
 
@@ -50,62 +58,71 @@ class AuthForm extends Component {
         password: this.passwordInput.value
       }
 
-      const response = await fetch('http://localhost:9000/auth/log_in', {
+      const response = await fetch('http://localhost:9000/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(userInfo)
       })
-      const user = await response.json()
-      if (!response.ok) {
-        this.props.setMessage('The username or password you entered is not correct')
-        throw new Error('Response is not OK')
+
+      if (response.status !== 200) {
+        this.props.setStatusFailed()
+        this.props.setMessage('Error')
+        throw new Error(response.message)
+      }
+
+      const res = await response.json()
+
+      if (!res.success) {
+        console.log(res)
+        this.props.setStatusFailed()
+        this.props.setMessage(res.message)
       } else {
-        console.log(user)
         //localStorage.setItem('id_token', user.id_token)
         //localStorage.setItem('access_token', user.access_token)
-        this.props.setStatusNormal()
+        this.props.userAuthSetMyInfo(res.body) //Положить всё в store
+        this.props.setStatusNormal() 
         this.props.setMessage('Successfuly!')
+        //Загрузить main
       }
-    } catch (err){
-      this.props.setStatusHasErrored()
-      console.log(err)
-    }
+    } catch(err) {
+    console.log(err)
   }
+}
 
-  render() {
-    return (
-      <div
-        className='form'>
-        <h1>Account Log In</h1>
-        <h3>Please enter your account details below and click <span class='important'>Log in</span> button!</h3>
-        <h3>Login:</h3>
-        <input
-          ref={(loginInput) => { this.loginInput = loginInput }}
-          className='login-fld'
-          type='login'
-          placeholder='electroturtle123'
-          onKeyDown={this.handleKeyDown}></input>
-        <h3>Password:</h3>
-        <input
-          ref={(passwordInput) => { this.passwordInput = passwordInput }}
-          className='password-fld'
-          type='password'
-          placeholder='********'
-          onKeyDown={this.handleKeyDown}></input>
-        <button
-          type=''
-          className='enter-btn'
-          onClick={this.handleSignIn}> Log In! </button>
-        <h1>{this.props.message}</h1>
-        <h3> If you haven't an account, please, register:</h3>
-        <Link
-          to='/register'
-          className='register-btn'>Create an account</Link>
-      </div>
-    )
-  }
+render() {
+  return (
+    <div
+      className='form'>
+      <h1>Account Log In</h1>
+      <h3>Please enter your account details below and click <span className='important'>Log in</span> button!</h3>
+      <h3>Login:</h3>
+      <input
+        ref={(loginInput) => { this.loginInput = loginInput }}
+        className='login-fld'
+        type='login'
+        placeholder='electroturtle123'
+        onKeyDown={this.handleKeyDown}></input>
+      <h3>Password:</h3>
+      <input
+        ref={(passwordInput) => { this.passwordInput = passwordInput }}
+        className='password-fld'
+        type='password'
+        placeholder='********'
+        onKeyDown={this.handleKeyDown}></input>
+      <button
+        type=''
+        className='enter-btn'
+        onClick={this.handleLogIn}> Log In! </button>
+      <h1>{this.props.message}</h1>
+      <h3> If you haven't an account, please, register:</h3>
+      <Link
+        to='/register'
+        className='register-btn'>Create an account</Link>
+    </div>
+  )
+}
 }
 
 export default connect(
@@ -120,14 +137,17 @@ export default connect(
       setStatusIsLoading: () => {
         dispatch(setStatusIsLoading())
       },
-      setStatusHasErrored: () => {
-        dispatch(setStatusHasErrored())
+      setStatusFailed: () => {
+        dispatch(setStatusFailed())
       },
       setStatusNormal: () => {
         dispatch(setStatusNormal())
       },
       setMessage: (message) => {
         dispatch(setMessage(message))
+      },
+      userAuthSetMyInfo: (body) => {
+        dispatch(userAuthSetMyInfo(body))
       }
     }
   })(AuthForm)

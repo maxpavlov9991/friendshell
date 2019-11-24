@@ -2,10 +2,12 @@ import React from 'react';
 import './style.css'
 import AuthForm from '../../containers/AuthForm'
 import RegForm from '../../containers/RegForm'
-import { Route, Router, Link } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
+
 
 import IntroLogo from '../../components/IntroLogo/index'
 import ContactInfo from '../../components/ContactInfo/index'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 function AuthPage() {
   return (
@@ -22,7 +24,9 @@ function AuthPage() {
             <h1>Welcome to <span className='important'>FriendShell</span>!</h1>
           </div>
 
-          <Route exact path="/" component={AuthForm} />
+          <Route exact={true} path="/" render={() => (
+            <Redirect to='/auth' />
+          )} />
           <Route path="/auth" component={AuthForm} />
           <Route path="/register" component={RegForm} />
 

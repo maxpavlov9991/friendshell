@@ -1,6 +1,6 @@
 import {
     AUTH_SET_STATUS_IS_LOADING,
-    AUTH_SET_STATUS_HAS_ERRORED,
+    AUTH_SET_STATUS_FAILED,
     AUTH_SET_STATUS_NORMAL,
     AUTH_SET_MESSAGE
 } from './actions'
@@ -17,10 +17,10 @@ export const authorizationReducer = (state = initialState, action) => {
                 ...state,
                 status: 'isLoading'
             }
-        case AUTH_SET_STATUS_HAS_ERRORED:
+        case AUTH_SET_STATUS_FAILED:
             return {
                 ...state,
-                status: 'hasErrored'
+                status: 'Fail...'
             }
         case AUTH_SET_STATUS_NORMAL:
             return {

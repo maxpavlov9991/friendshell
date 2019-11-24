@@ -35,3 +35,21 @@ h1, h2, h3, p {
 .greeting > h1 {
     font-size: 50px;
 }
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter.fade-renter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
