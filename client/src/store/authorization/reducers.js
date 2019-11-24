@@ -1,50 +1,36 @@
 import {
-    AUTH_CHANGE_LOGIN_TEXT,
-    AUTH_CHANGE_PASSWORD_TEXT,
-    AUTH_CHANGE_THUNK_HAS_ERRORED,
-    AUTH_CHANGE_THUNK_IS_LOADING
+    AUTH_SET_STATUS_IS_LOADING,
+    AUTH_SET_STATUS_HAS_ERRORED,
+    AUTH_SET_STATUS_NORMAL,
+    AUTH_SET_MESSAGE
 } from './actions'
 
 const initialState = {
-    login: '',
-    password: '',
-    jwt: {
-        asdasd:'',
-        asddsa:''
-    },
-    thunk: {
-        hasErrored: false,
-        isLoading: false
-    }
+    status: 'normal',
+    message: ''
 }
 
 export const authorizationReducer = (state = initialState, action) => {
     switch (action.type) {
-        case AUTH_CHANGE_LOGIN_TEXT:
+        case AUTH_SET_STATUS_IS_LOADING:
             return {
                 ...state,
-                login: action.payload.login
+                status: 'isLoading'
             }
-        case AUTH_CHANGE_PASSWORD_TEXT:
+        case AUTH_SET_STATUS_HAS_ERRORED:
             return {
                 ...state,
-                password: action.payload.password
+                status: 'hasErrored'
             }
-        case AUTH_CHANGE_THUNK_HAS_ERRORED:
+        case AUTH_SET_STATUS_NORMAL:
             return {
                 ...state,
-                thunk: {
-                    ...state.thunk,
-                    hasErrored: !state.thunk.hasErrored
-                }
+                status: 'normal'
             }
-        case AUTH_CHANGE_THUNK_IS_LOADING:
+        case AUTH_SET_MESSAGE:
             return {
                 ...state,
-                thunk: {
-                    ...state.thunk,
-                    isLoading: !state.thunk.isLoading
-                }
+                message: action.payload.message
             }
         default:
             return state

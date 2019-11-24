@@ -1,34 +1,23 @@
-export const REGISTRATION_CHANGE_LOGIN_TEXT = 'REGISTRATION_CHANGE_LOGIN_TEXT'
-export const REGISTRATION_CHANGE_EMAIL_TEXT = 'REGISTRATION_CHANGE_EMAIL_TEXT'
-export const REGISTRATION_CHANGE_PASSWORD_TEXT = 'REGISTRATION_CHANGE_PASSWORD_TEXT'
-export const REGISTRATION_CHANGE_THUNK_HAS_ERRORED = 'REGISTRATION_CHANGE_THUNK_HAS_ERRORED'
-export const REGISTRATION_CHANGE_THUNK_IS_LOADING = 'REGISTRATION_THUNK_IS_LOADING'
+export const REGISTRATION_SET_STATUS_IS_LOADING = 'REGISTRATION_SET_STATUS_IS_LOADING'
+export const REGISTRATION_SET_STATUS_HAS_ERRORED = 'REGISTRATION_SET_STATUS_HAS_ERRORED'
+export const REGISTRATION_SET_STATUS_NORMAL = 'REGISTRATION_SET_STATUS_NORMAL'
+export const REGISTRATION_SET_MESSAGE = 'REGISTRATION_SET_MESSAGE'
 
-export const changeLoginText = (login) => ({
-    type: REGISTRATION_CHANGE_LOGIN_TEXT,
+export const setStatusIsLoading = () => ({
+    type: REGISTRATION_SET_STATUS_IS_LOADING
+})
+
+export const setStatusHasErrored = () => ({
+    type: REGISTRATION_SET_STATUS_HAS_ERRORED
+})
+
+export const setStatusNormal = () => ({
+    type: REGISTRATION_SET_STATUS_NORMAL
+})
+
+export const setMessage = (message) => ({
+    type: REGISTRATION_SET_MESSAGE,
     payload: {
-        login: login
+        message: message
     }
-})
-
-export const changeEmailText = (email) => ({
-    type: REGISTRATION_CHANGE_EMAIL_TEXT,
-    payload: {
-        email: email
-    }
-})
-
-export const changePasswordText = (password) => ({
-    type: REGISTRATION_CHANGE_PASSWORD_TEXT,
-    payload: {
-        password: password
-    }
-})
-
-export const changeThunkHasErrored = () => ({
-    type: REGISTRATION_CHANGE_THUNK_HAS_ERRORED
-})
-
-export const changeThunkIsLoading = () => ({
-    type: REGISTRATION_CHANGE_THUNK_IS_LOADING
 })

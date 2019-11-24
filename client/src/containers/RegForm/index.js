@@ -4,23 +4,18 @@ import { Link } from 'react-router-dom'
 import './style.css'
 
 import {
-  changeLoginText,
-  changeEmailText,
-  changePasswordText,
-  changeThunkHasErrored,
-  changeThunkIsLoading
+  setStatusIsLoading,
+  setStatusHasErrored,
+  setStatusNormal,
+  setMessage
 } from '../../store/registration/actions'
 
 class RegForm extends Component {
   constructor(props) {
     super(props)
 
-    this.handleLoginChange = this.handleLoginChange.bind(this)
-    this.handleEmailChange = this.handleEmailChange.bind(this)
-    this.handlePasswordChange = this.handlePasswordChange.bind(this)
     this.handleKeyDown = this.handleKeyDown.bind(this)
-    this.handleGoToSignIn = this.handleGoToSignIn.bind(this)
-    this.handleEnter = this.handleEnter.bind(this)
+    this.handleSignUp = this.handleSignUp.bind(this)
   }
 
   componentDidMount() {
@@ -29,20 +24,7 @@ class RegForm extends Component {
   componentWillUnmount() {
   }
 
-  handleLoginChange(event) {
-    this.props.changeLoginText(event.target.value)
-  }
-
-  handleEmailChange(event) {
-    this.props.changeEmailText(event.target.value)
-  }
-
-  handlePasswordChange(event) {
-    this.props.changePasswordText(event.target.value)
-  }
-
   handleKeyDown(event) {
-    console.log(event.keyCode)
     if (event.keyCode === 13) {
       switch (event.target) {
         case this.loginInput:
@@ -52,7 +34,7 @@ class RegForm extends Component {
           this.passwordInput.focus()
           break
         case this.passwordInput:
-          this.handleEnter()
+          this.handleGoToSignUp()
           break
         default:
           break
@@ -60,31 +42,49 @@ class RegForm extends Component {
     }
   }
 
-  handleGoToSignIn(event) {
+  async handleSignUp(event){
+    try {
 
-  }
+      this.props.setMessage('')
+      this.props.setStatusIsLoading()
 
-  handleEnter(event) {
-    console.log('ENTER!')
+      const userInfo = {
+        login: this.loginInput.value,
+        email: this.emailInput.value,
+        password: this.passwordInput.value
+      }
+
+      const response = await fetch('http://localhost:9000/auth/reg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(userInfo)
+      })
+      const res = await response.json()
+      if (!response.ok) {
+        this.props.setMessage('Responce is NOT OK')
+        throw new Error('Response is not OK')
+      } else {
+        console.log(res)
+        //localStorage.setItem('id_token', user.id_token)
+        //localStorage.setItem('access_token', user.access_token)
+        this.props.setStatusNormal()
+        this.props.setMessage('Successfuly!')
+      }
+    } catch (err){
+      this.props.setStatusHasErrored()
+      console.log(err)
+    }
   }
 
   //ref attributes
   render() {
-    let message = ''
-
-    if (this.props.hasErrored) {
-      message = 'ERROR'
-    }
-
-    if (this.props.isLoading) {
-      message = 'is loading....'
-    }
 
     return (
       <div>
         <div
           className='form'>
-          <p>{message}</p>
           <h1>Registration</h1>
           <h3>Please enter your details below and click <span class='important'>Sign up</span> button!</h3>
           <h3>Login:</h3>
@@ -93,35 +93,30 @@ class RegForm extends Component {
             className='login-fld'
             type='login'
             placeholder='anonimus2009'
-            onKeyDown={this.handleKeyDown}
-            onChange={this.handleLoginChange}
-            value={this.props.login}></input>
+            onKeyDown={this.handleKeyDown}></input>
           <h3>E-mail:</h3>
           <input
             ref={(emailInput) => { this.emailInput = emailInput }}
             className='email-fld'
             type='email'
             placeholder='kiberfrog@gmail.com'
-            onKeyDown={this.handleKeyDown}
-            onChange={this.handleEmailChange}
-            value={this.props.email}></input>
+            onKeyDown={this.handleKeyDown}></input>
           <h3>Password:</h3>
           <input
             ref={(passwordInput) => { this.passwordInput = passwordInput }}
             className='password-fld'
             type='password'
             placeholder='*********'
-            onKeyDown={this.handleKeyDown}
-            onChange={this.handlePasswordChange}
-            value={this.props.password}></input>
+            onKeyDown={this.handleKeyDown}></input>
           <button
             type=''
-            className='enter-btn'>Sign Up!</button>
+            className='enter-btn'
+            onClick={this.handleSignUp}>Sign Up!</button>
+          <h1>{this.props.message}</h1>
           <h3> If you have an account, sign in:</h3>
           <Link
             to='/auth'
-            className='login-btn'
-            onClick={this.handleGoToSignIn}>I have an account</Link>
+            className='login-btn'>I have an account</Link>
         </div>
       </div>
     )
@@ -131,29 +126,23 @@ class RegForm extends Component {
 export default connect(
   (state) => {
     return {
-      login: state.reg.login,
-      email: state.reg.email,
-      password: state.reg.password,
-      hasErrored: state.reg.thunk.hasErrored,
-      isLoading: state.reg.thunk.isLoading
+      status: state.reg.status,
+      message: state.reg.message
     }
   },
   (dispatch) => {
     return {
-      changeLoginText: (login) => {
-        dispatch(changeLoginText(login))
+      setStatusIsLoading: () => {
+        dispatch(setStatusIsLoading())
       },
-      changeEmailText: (email) => {
-        dispatch(changeEmailText(email))
+      setStatusHasErrored: () => {
+        dispatch(setStatusHasErrored())
       },
-      changePasswordText: (password) => {
-        dispatch(changePasswordText(password))
+      setStatusNormal: () => {
+        dispatch(setStatusNormal())
       },
-      changeThunkHasErrored: () => {
-        dispatch(changeThunkHasErrored())
-      },
-      changeThunkIsLoading: () => {
-        dispatch(changeThunkIsLoading())
+      setMessage: (message) => {
+        dispatch(setMessage(message))
       }
     }
   })(RegForm)

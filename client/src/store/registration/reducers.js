@@ -1,53 +1,36 @@
 import {
-    REGISTRATION_CHANGE_LOGIN_TEXT,
-    REGISTRATION_CHANGE_EMAIL_TEXT,
-    REGISTRATION_CHANGE_PASSWORD_TEXT,
-    REGISTRATION_CHANGE_THUNK_HAS_ERRORED,
-    REGISTRATION_CHANGE_THUNK_IS_LOADING
+    REGISTRATION_SET_STATUS_IS_LOADING,
+    REGISTRATION_SET_STATUS_HAS_ERRORED,
+    REGISTRATION_SET_STATUS_NORMAL,
+    REGISTRATION_SET_MESSAGE
 } from './actions'
 
 const initialState = {
-    login: '',
-    email: '',
-    password: '',
-    thunk: {
-        hasErrored: false,
-        isLoading: false
-    }
+    status: 'normal',
+    message: ''
 }
 
 export const registrationReducer = (state = initialState, action) => {
     switch (action.type) {
-        case REGISTRATION_CHANGE_LOGIN_TEXT:
+        case REGISTRATION_SET_STATUS_IS_LOADING:
             return {
                 ...state,
-                login: action.payload.login
+                status: 'isLoading'
             }
-        case REGISTRATION_CHANGE_EMAIL_TEXT:
+        case REGISTRATION_SET_STATUS_HAS_ERRORED:
             return {
                 ...state,
-                email: action.payload.email
+                status: 'hasErrored'
             }
-        case REGISTRATION_CHANGE_PASSWORD_TEXT:
+        case REGISTRATION_SET_STATUS_NORMAL:
             return {
                 ...state,
-                password: action.payload.password
+                status: 'normal'
             }
-        case REGISTRATION_CHANGE_THUNK_HAS_ERRORED:
+        case REGISTRATION_SET_MESSAGE:
             return {
                 ...state,
-                thunk: {
-                    ...state.thunk,
-                    hasErrored: !state.thunk.hasErrored
-                }
-            }
-        case REGISTRATION_CHANGE_THUNK_IS_LOADING:
-            return {
-                ...state,
-                thunk: {
-                    ...state.thunk,
-                    isLoading: !state.thunk.isLoading
-                }
+                message: action.payload.message
             }
         default:
             return state

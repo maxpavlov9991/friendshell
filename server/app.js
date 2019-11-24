@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -10,8 +11,13 @@ var app = express();
 /* Routes */
 
 var usersRouter = require('./routes/user');
+var authRouter = require('./routes/auth');
 
 mongoose.connect('mongodb://localhost/friendshell', { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false })
+
+app.use(cors({
+  origin: 'http://localhost:3000'
+}))
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -20,7 +26,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/users', usersRouter);
+app.use('/users', usersRouter)
+app.use('/auth', authRouter)
 
 
 // catch 404 and forward to error handler
