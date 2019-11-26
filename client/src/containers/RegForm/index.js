@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import './style.css'
 
 import {
   setStatusIsLoading,
@@ -13,6 +11,14 @@ import {
 import {
   userAuthSetMyInfo
 } from '../../store/user/actions'
+
+import {
+  Form,
+  StyledButton,
+  StyledLink,
+  ImportantText,
+  StyledInput
+} from './styled'
 
 class RegForm extends Component {
   constructor(props) {
@@ -103,42 +109,37 @@ class RegForm extends Component {
 
     return (
       <div>
-        <div
-          className='form'>
+        <Form>
           <h1>Registration</h1>
-          <h3>Please enter your details below and click <span className='important'>Sign up</span> button!</h3>
+          <h3>Please enter your details below and click <ImportantText styledColor='#a7e4a9'>Sign up</ImportantText> button!</h3>
           <h3>Login:</h3>
-          <input
+          <StyledInput
             ref={(loginInput) => { this.loginInput = loginInput }}
-            className='login-fld'
             type='login'
             placeholder='anonimus2009'
-            onKeyDown={this.handleKeyDown}></input>
+            onKeyDown={this.handleKeyDown}></StyledInput>
           <h3>E-mail:</h3>
-          <input
+          <StyledInput
             ref={(emailInput) => { this.emailInput = emailInput }}
-            className='email-fld'
             type='email'
             placeholder='kiberfrog@gmail.com'
-            onKeyDown={this.handleKeyDown}></input>
+            onKeyDown={this.handleKeyDown}></StyledInput>
           <h3>Password:</h3>
-          <input
+          <StyledInput
             ref={(passwordInput) => { this.passwordInput = passwordInput }}
-            className='password-fld'
             type='password'
             placeholder='*********'
-            onKeyDown={this.handleKeyDown}></input>
-          <button
-            type=''
-            className='enter-btn'
-            onClick={this.handleSignUp}>Sign Up!</button>
+            onKeyDown={this.handleKeyDown}></StyledInput>
+          <StyledButton
+            green
+            onClick={this.handleSignUp}>Sign Up!</StyledButton>
           <h1>{this.props.status}</h1>
           <h2>{this.props.message}</h2>
           <h3> If you have an account, sign in:</h3>
-          <Link
-            to='/auth'
-            className='login-btn'>I have an account</Link>
-        </div>
+          <StyledLink
+            orange
+            to='/auth'>I have an account</StyledLink>
+        </Form>
       </div>
     )
   }
