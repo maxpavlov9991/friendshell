@@ -1,12 +1,23 @@
-export const AUTH_CHANGE_LOGIN_TEXT = 'AUTH_CHANGE_LOGIN_TEXT'
-export const AUTH_CHANGE_PASSWORD_TEXT = 'AUTH_CHANGE_PASSWORD_TEXT'
+export const AUTH_SET_STATUS_IS_LOADING = 'AUTH_SET_STATUS_IS_LOADING'
+export const AUTH_SET_STATUS_FAILED = 'AUTH_SET_STATUS_FAILED'
+export const AUTH_SET_STATUS_NORMAL = 'AUTH_SET_STATUS_NORMAL'
+export const AUTH_SET_MESSAGE = 'AUTH_SET_MESSAGE'
 
-export const setLoginText = (login) => ({
-    type: AUTH_CHANGE_LOGIN_TEXT,
-    payload: login
+export const setStatusIsLoading = () => ({
+    type: AUTH_SET_STATUS_IS_LOADING
 })
 
-export const setPasswordText = (password) => ({
-    type: AUTH_CHANGE_PASSWORD_TEXT,
-    payload: password
+export const setStatusFailed = () => ({
+    type: AUTH_SET_STATUS_FAILED
+})
+
+export const setStatusNormal = () => ({
+    type: AUTH_SET_STATUS_NORMAL
+})
+
+export const setMessage = (message) => ({
+    type: AUTH_SET_MESSAGE,
+    payload: {
+        message: message
+    }
 })

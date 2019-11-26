@@ -1,18 +1,23 @@
-export const REGISTRATION_CHANGE_LOGIN_TEXT = 'REGISTRATION_CHANGE_LOGIN_TEXT'
-export const REGISTRATION_CHANGE_EMAIL_TEXT = 'REGISTRATION_CHANGE_EMAIL_TEXT'
-export const REGISTRATION_CHANGE_PASSWORD_TEXT = 'REGISTRATION_CHANGE_PASSWORD_TEXT'
+export const REGISTRATION_SET_STATUS_IS_LOADING = 'REGISTRATION_SET_STATUS_IS_LOADING'
+export const REGISTRATION_SET_STATUS_FAILED = 'REGISTRATION_SET_STATUS_FAILED'
+export const REGISTRATION_SET_STATUS_NORMAL = 'REGISTRATION_SET_STATUS_NORMAL'
+export const REGISTRATION_SET_MESSAGE = 'REGISTRATION_SET_MESSAGE'
 
-export const setLoginText = (login) => ({
-    type: REGISTRATION_CHANGE_LOGIN_TEXT,
-    payload: login
+export const setStatusIsLoading = () => ({
+    type: REGISTRATION_SET_STATUS_IS_LOADING
 })
 
-export const setEmailText = (email) => ({
-    type: REGISTRATION_CHANGE_EMAIL_TEXT,
-    payload: email
+export const setStatusFailed = () => ({
+    type: REGISTRATION_SET_STATUS_FAILED
 })
 
-export const setPasswordText = (password) => ({
-    type: REGISTRATION_CHANGE_PASSWORD_TEXT,
-    payload: password
+export const setStatusNormal = () => ({
+    type: REGISTRATION_SET_STATUS_NORMAL
+})
+
+export const setMessage = (message) => ({
+    type: REGISTRATION_SET_MESSAGE,
+    payload: {
+        message: message
+    }
 })

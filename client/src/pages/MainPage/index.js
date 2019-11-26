@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css'
 
 
-function LoginPage() {
+function MainPage() {
   return (
     <div className='page-main'>
         <h1>Main PAGE!!!</h1>
@@ -10,4 +10,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default MainPage;

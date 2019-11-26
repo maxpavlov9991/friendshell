@@ -1,31 +1,36 @@
 import {
-    REGISTRATION_CHANGE_LOGIN_TEXT,
-    REGISTRATION_CHANGE_EMAIL_TEXT,
-    REGISTRATION_CHANGE_PASSWORD_TEXT
+    REGISTRATION_SET_STATUS_IS_LOADING,
+    REGISTRATION_SET_STATUS_FAILED,
+    REGISTRATION_SET_STATUS_NORMAL,
+    REGISTRATION_SET_MESSAGE
 } from './actions'
 
 const initialState = {
-    login: '',
-    email: '',
-    password: ''
+    status: '',
+    message: ''
 }
 
 export const registrationReducer = (state = initialState, action) => {
     switch (action.type) {
-        case REGISTRATION_CHANGE_LOGIN_TEXT:
+        case REGISTRATION_SET_STATUS_IS_LOADING:
             return {
                 ...state,
-                login: action.payload
+                status: 'Loading...'
             }
-        case REGISTRATION_CHANGE_EMAIL_TEXT:
+        case REGISTRATION_SET_STATUS_FAILED:
             return {
                 ...state,
-                email: action.payload
+                status: 'Fail...'
             }
-        case REGISTRATION_CHANGE_PASSWORD_TEXT:
+        case REGISTRATION_SET_STATUS_NORMAL:
             return {
                 ...state,
-                password: action.payload
+                status: ''
+            }
+        case REGISTRATION_SET_MESSAGE:
+            return {
+                ...state,
+                message: action.payload.message
             }
         default:
             return state

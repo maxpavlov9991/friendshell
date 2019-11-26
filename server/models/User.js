@@ -1,36 +1,30 @@
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
+
     auth: {
         login: String,
-        password: String,
-        jwt: {
-            stkey: String,
-            ndkey: String
-        }
+        password: String
     },
 
     info: {
+        email: String,
         name: String,
+        reg_date: Date,
         birthday: Date,
-        register: Date,
-        email: String
+        sub: {
+            subscriptions: [String],
+            subscribers: [String]
+        },
+        questions: {
+            my: [String],
+            tome: [String]
+        },
     },
-    
-    sub: {
-        subscriptions: [ String ], 
-        subscribers: [ String ]
-    },
-
-    questions: {
-        my: [ String ], 
-        tome: [ String ]
-    },
-    
 },
-{
-    timestamp: true
-})
+    {
+        timestamp: true
+    })
 
 const User = mongoose.model('User', UserSchema)
 
