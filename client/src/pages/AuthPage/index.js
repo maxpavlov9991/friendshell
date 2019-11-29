@@ -3,8 +3,8 @@ import { Route, Redirect } from 'react-router-dom'
 
 import IntroLogo from '../../components/IntroLogo/index'
 import ContactInfo from '../../components/ContactInfo/index'
-import AuthForm from '../../containers/AuthForm'
-import RegForm from '../../containers/RegForm'
+import AuthForm from '../../containers/AuthForm/index'
+import RegForm from '../../containers/RegForm/index'
 
 import { Page,
   LogoWrapper,

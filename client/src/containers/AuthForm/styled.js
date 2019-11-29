@@ -24,6 +24,7 @@ export const StyledButton = styled.button`
   font-size: 30px;
   margin: auto;
   outline: none;
+  cursor: pointer;
   border: none; 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
