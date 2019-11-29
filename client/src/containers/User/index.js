@@ -8,6 +8,7 @@ import {
   InfoLabel,
   InfoValue,
   Sub,
+  Name,
   Subscribers,
   Subscriptions,
   UserInfoWrapper
@@ -15,19 +16,20 @@ import {
 
 function User() {
   return (
-    <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/back.jpg") + `)`}>
+    <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/2back.jpg") + `)`}>
     <UserInfo>
 
       <Avatar src={require("../../media/img/4YnwRWs_S8E.jpg")} alt='name' />
 
       <UserBio>
-        <h2>Max Pavlov</h2>
+        <Name>
+          <h2>Max Pavlov</h2>
+        </Name>
         <ul>
           <li><InfoLabel>Birthday:</InfoLabel><InfoValue>11.04.2009</InfoValue></li>
           <li><InfoLabel>City:</InfoLabel><InfoValue>Krasnoyarsk</InfoValue></li>
           <li><InfoLabel>University:</InfoLabel><InfoValue>ITMO</InfoValue></li>
           <li><InfoLabel>Website:</InfoLabel><InfoValue>https://github.com/maxpavlov9991https://github.com/maxpavlov9991https://github.com/maxpavlov9991</InfoValue></li>
-        
           <li><InfoLabel>Age:</InfoLabel><InfoValue>ITMOasdasdasdasdasd</InfoValue></li>
           <li><InfoLabel>Indicator:</InfoLabel><InfoValue>ITMOasdasdasdasd</InfoValue></li>
           <li><InfoLabel>Work:</InfoLabel><InfoValue>ITMO</InfoValue></li>

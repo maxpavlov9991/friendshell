@@ -3,10 +3,11 @@ import styled from 'styled-components'
 export const UserInfoWrapper = styled.div`
   width: 100%;
   background-image: ${props => props.backgroundImage};
-  background-blend-mode: luminosity; /* */
+  background-blend-mode: overlay;
+  background-attachment: fixed;
   background-size: cover;
-  background-color: #424242;
-  padding: 80px 0 50px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 80px 0 10px 0;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 `
 
@@ -39,22 +40,17 @@ export const Avatar = styled.img`
 
 export const UserBio = styled.div`
   grid-area: user-bio;
-
+  margin: 0;
   gap: 10px;
-
   display: grid;
-
+  align-self: center;
+  justify-self: center;
 
   grid-template-areas:
     'name'
     'info'
     'sub'
     'follow-btn';
-
-  margin: 0 auto;
-  padding: 0;
-  align-self: center;
-  justify-self: center;
 
   > h2 {
     grid-area: name;
@@ -83,21 +79,30 @@ export const UserBio = styled.div`
 
 `
 
+export const Name = styled.div`
+  color: white;
+  background-color: rgba(66, 66, 66, 0.7);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+`
+
 export const Sub = styled.div`
   display: grid;
   grid-template-areas:
     'subscribers subscriptions';
+  
+  background-color: rgba(66, 66, 66, 0.7);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 
 `
 
 export const Subscribers = styled.div`
   grid-area: subscribers;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   align-self: start;
   justify-self: center;
-  padding-bottom: 20px;
+  padding: 15px 0 15px 0;
 
 
   > p {
@@ -109,11 +114,11 @@ export const Subscribers = styled.div`
 export const Subscriptions = styled.div`
   grid-area: subscriptions;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   align-self: start;
   justify-self: center;
-  padding-bottom: 20px;
+  padding: 15px 0 15px 0;
 
   > p {
     margin: 0;
@@ -129,11 +134,11 @@ export const FollowButton = styled.button`
   width: 300px;
   height: 50px;
   border: none;
-  border-radius: 10px;
   background-color: #a7e4a9;
   color: black;
   outline: none;
 
+  margin: 15px 0 15px 0;
   align-self: center;
   justify-self: center;
   transition: 0.3s background-color;

@@ -2,14 +2,20 @@ import React from 'react';
 
 import {
     AskFormWrap,
-    Form
+    Form,
+    AskTitle,
+    AskInput,
+    AskButton
 } from './styled'
 
 function AskForm() {
   return (
     <AskFormWrap>
-        <Form>ASDASD
-            <input placeholder='ASDASD'></input>
+        <Form>
+          <AskTitle placeholder='Title'></AskTitle>
+          <AskInput placeholder='Your question?'></AskInput>
+
+          <AskButton>Send</AskButton>
         </Form>
     </AskFormWrap>
   )
