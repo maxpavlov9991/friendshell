@@ -2,8 +2,7 @@ import React from 'react';
 
 import Header from '../../components/Header/index'
 import User from '../../containers/User/index'
-
-
+import AskForm from '../../containers/AskForm/index'
 
 import {
   Page,
@@ -17,7 +16,7 @@ function UserPage() {
       <Content>
         <User/>
         <div>Questions</div>
-        <div>AskForm</div>
+        <AskForm/>
       </Content>
     </Page>
   )
