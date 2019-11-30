@@ -16,7 +16,7 @@ import {
 
 function User() {
   return (
-    <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/2back.jpg") + `)`}>
+    <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/1back.jpg") + `)`}>
     <UserInfo>
 
       <Avatar src={require("../../media/img/4YnwRWs_S8E.jpg")} alt='name' />

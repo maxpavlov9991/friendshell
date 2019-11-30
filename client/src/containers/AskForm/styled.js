@@ -3,18 +3,17 @@ import styled from 'styled-components'
 export const AskFormWrap = styled.div`
 
   @media (min-width: 992px) {
-    margin: 0 auto 20px auto;
+    margin: 0 auto 5px auto;
   }
 
   @media (max-width: 991px) and (min-width: 480px) {
-    margin: 0 auto 10px auto;
+    margin: 0 auto 5px auto;
   }
 
   @media (max-width: 479px) {
     margin: 0 auto 5px auto;
   }
-
-  min-width: 300px;
+  z-index: 10;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -22,7 +21,7 @@ export const AskFormWrap = styled.div`
 
 export const Form = styled.div`
   @media (min-width: 992px) {
-    width: 800px;
+    width: 900px;
   }
 
   @media (max-width: 991px) and (min-width: 480px) {
@@ -32,7 +31,6 @@ export const Form = styled.div`
   @media (max-width: 479px) {
     width: 300px;
   }
-
   min-width: 300px;
   margin: 0 auto;
   position: relative;
@@ -63,7 +61,7 @@ export const AskTitle = styled.input`
   margin-bottom: 5px;
 
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(66, 66, 66, 0.7);
+  background-color: rgba(50, 49, 66, 0.9);
 
   ::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
   ::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
@@ -96,9 +94,10 @@ export const AskInput = styled.textarea`
     padding: 5px 0 0 2%;
   }
 
+  font-weight: bold;
   resize: none;
   margin-bottom: 5px;
-  background-color: rgba(66, 66, 66, 0.7);
+  background-color: rgba(50, 49, 66, 0.9);
   color: white;
   outline: none;
   border: none;

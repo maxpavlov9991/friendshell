@@ -18,7 +18,7 @@ export default () => (
         <Switch>
           <Route exact path="/main" component={MainPage}/>
           <Route path="/auth" component={AuthPage}/>
-          <Route path="/" component={UserPage}/>
+          <Route path="/user" component={UserPage}/>
         </Switch>
     </Router>
   </Provider>

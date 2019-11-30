@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../../components/Header/index'
 import User from '../../containers/User/index'
 import AskForm from '../../containers/AskForm/index'
+import Answers from '../../containers/Answers/index'
 
 import {
   Page,
@@ -15,7 +16,7 @@ function UserPage() {
       <Header/>
       <Content>
         <User/>
-        <div>Questions</div>
+        <Answers/>
         <AskForm/>
       </Content>
     </Page>

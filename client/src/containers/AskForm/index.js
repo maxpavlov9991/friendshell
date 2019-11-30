@@ -12,9 +12,7 @@ function AskForm() {
   return (
     <AskFormWrap>
         <Form>
-          <AskTitle placeholder='Title'></AskTitle>
           <AskInput placeholder='Your question?'></AskInput>
-
           <AskButton>Send</AskButton>
         </Form>
     </AskFormWrap>

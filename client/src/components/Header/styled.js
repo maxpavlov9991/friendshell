@@ -10,16 +10,16 @@ export const Head = styled.header`
   }
 
   min-width: 320px;
-  background-color: rgba(47, 49, 54, 0.7);
+  background-color: rgba(3, 27, 53, 0.9);
   position: fixed;
   width: 100%;
   z-index: 50;
 `
 
 export const StyledMenu = styled.ul`
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 
   li {
     display: inline;
@@ -31,7 +31,7 @@ export const StyledMenu = styled.ul`
       line-height: 50px
     }
     li:not(:first-child) {
-      margin-left: 50px;
+      margin-left: 100px;
     }
   }
 

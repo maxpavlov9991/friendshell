@@ -60,7 +60,7 @@ export const LogoText = styled.div`
   height: 150px;
   left: calc(50% - 350px);
   top: calc(50% - 75px);
-	background-color: rgba(3, 21, 31, 0.8);
+  background-color: rgba(2, 15, 29, 0.8);
 	
 	> .logotext {
 		position: absolute;

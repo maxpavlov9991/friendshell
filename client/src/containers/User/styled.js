@@ -144,12 +144,12 @@ export const UserBio = styled.div`
 
   > ul > li:not(:first-child) {
       margin-top: 10px;
-    }
+  }
 `
 
 export const Name = styled.div`
   color: white;
-  background-color: rgba(66, 66, 66, 0.7);
+  background-color: rgba(3, 27, 53, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 `
 
@@ -158,7 +158,7 @@ export const Sub = styled.div`
   grid-template-areas:
     'subscribers subscriptions';
   
-  background-color: rgba(66, 66, 66, 0.7);
+  background-color: rgba(3, 27, 53, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 
 `
@@ -274,9 +274,8 @@ export const InfoLabel = styled.div`
 
   grid-area: label;
   font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: pre-wrap;
   color: #EFEFEF;
   align-self: start;
   justify-self: start;
@@ -297,8 +296,8 @@ export const InfoValue = styled.div`
   }
 
   grid-area: value;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: pre-wrap;
   color: white;
   align-self: center;
   justify-self: end;
