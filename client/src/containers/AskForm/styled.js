@@ -1,21 +1,59 @@
 import styled from 'styled-components'
 
 export const AskFormWrap = styled.div`
+
+  @media (min-width: 992px) {
+    margin: 0 auto 20px auto;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    margin: 0 auto 10px auto;
+  }
+
+  @media (max-width: 479px) {
+    margin: 0 auto 5px auto;
+  }
+
+  min-width: 300px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  margin: 0 auto 20px auto;
 `
 
 export const Form = styled.div`
+  @media (min-width: 992px) {
+    width: 800px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media (max-width: 479px) {
+    width: 300px;
+  }
+
+  min-width: 300px;
   margin: 0 auto;
   position: relative;
-  width: 768px;
   
 `
 
 export const AskTitle = styled.input`
+  @media (min-width: 992px) {
+    height: 30px;
+  }
 
+  @media (max-width: 991px) and (min-width: 480px) {
+    height: 25px;
+  }
+
+  @media (max-width: 479px) {
+    height: 20px;
+  }
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
   outline: none;
   border: none;
   color: white;
@@ -24,8 +62,7 @@ export const AskTitle = styled.input`
   height: 25px;
   margin-bottom: 5px;
 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(66, 66, 66, 0.7);
 
   ::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
@@ -40,18 +77,34 @@ export const AskTitle = styled.input`
 `
 
 export const AskInput = styled.textarea`
-  resize: none;
 
+  @media (min-width: 992px) {
+    height: 75px;
+    width: 80%;
+    padding: 5px 0 0 2%;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    height: 45px;
+    width: 80%;
+    padding: 5px 0 0 2%;
+  }
+
+  @media (max-width: 479px) {
+    height: 50px;
+    width: 98%;
+    padding: 5px 0 0 2%;
+  }
+
+  resize: none;
   margin-bottom: 5px;
-  height: 75px;
-  width: 83%;
-  padding: 5px 0 0 2%;
   background-color: rgba(66, 66, 66, 0.7);
   color: white;
   outline: none;
   border: none;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
   ::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
   ::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
@@ -66,20 +119,39 @@ export const AskInput = styled.textarea`
 
 export const AskButton = styled.button`
 
-  position: absolute;
-  left: 100%;
-  transform: translateX(-100%);
+  @media (min-width: 992px) {
+    height: 80px;
+    width: 18%;
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    font-size: 20px;
+  }
 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  @media (max-width: 991px) and (min-width: 480px) {
+    height: 50px;
+    width: 18%;
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    font-size: 18px;
+  }
 
-  height: 80px;
-  width: 15%;
-  font-size: 20px;
+  @media (max-width: 479px) {
+    height: 40px;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   background-color: coral;
   border: none;
   outline: none;
   color: white;
   transition: 0.3s color, 0.3s background-color;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   :hover {
     background-color: white;
