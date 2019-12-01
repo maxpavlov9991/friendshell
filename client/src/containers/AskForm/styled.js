@@ -144,10 +144,10 @@ export const AskButton = styled.button`
   }
 
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: coral;
+  background-color: ${(props) => (props.disabled) ? 'gray' : 'coral'};
   border: none;
   outline: none;
-  color: white;
+  color: ${(props) => (props.disabled) ? 'black' : 'white'};
   transition: 0.3s color, 0.3s background-color;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

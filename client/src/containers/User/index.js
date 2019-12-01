@@ -44,14 +44,16 @@ class User extends Component {
             </ul>
 
             <Sub>
-              <Subscribers>
-                <p>Subscribers:</p>
-                <p>12312</p>
-              </Subscribers>
-              <Subscriptions>
+              
+              <Subscriptions to='/main/subs/subscriptions'>
                 <p>Subscriptions:</p>
                 <p>12312</p>
               </Subscriptions>
+              <Subscribers to='/main/subs/subscribers'>
+                <p>Subscribers:</p>
+                <p>12312</p>
+              </Subscribers>
+              
             </Sub>
 
             <FollowButton>Follow</FollowButton>
