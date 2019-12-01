@@ -151,6 +151,7 @@ export const Name = styled.div`
   color: white;
   background-color: rgba(3, 27, 53, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
 `
 
 export const Sub = styled.div`
@@ -276,7 +277,7 @@ export const InfoLabel = styled.div`
   font-weight: bold;
   word-wrap: break-word;
   white-space: pre-wrap;
-  color: #EFEFEF;
+  color: white;
   align-self: start;
   justify-self: start;
 `
@@ -298,7 +299,7 @@ export const InfoValue = styled.div`
   grid-area: value;
   word-wrap: break-word;
   white-space: pre-wrap;
-  color: white;
+  color: #DFDFDF;
   align-self: center;
   justify-self: end;
 `

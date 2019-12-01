@@ -1,17 +1,18 @@
 import React from 'react';
 import {
   Head,
-  StyledMenu
+  StyledMenu,
+  StyledLink
 } from './styled'
 
 function Header() {
   return (
     <Head>
       <StyledMenu>
-        <li><a href='#'>Subs</a></li>
-        <li><a href='#'>Questions</a></li>
-        <li><a href='#'>Profile</a></li>
-        <li><a href='#'>Exit</a></li>
+        <li><StyledLink to='/main/subs'>Subs</StyledLink></li>
+        <li><StyledLink to='/main/user'>Questions</StyledLink></li>
+        <li><StyledLink to='/main/user'>Profile</StyledLink></li>
+        <li><StyledLink to='/auth/login'>Exit</StyledLink></li>
       </StyledMenu>
     </Head>
   )

@@ -21,6 +21,7 @@ export const Content = styled.div`
   margin-left: auto;
   padding-top: 50px;
   padding-bottom: 50px;
+  text-align: center;
 `
 
 export const HugeText = styled.h1`

@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 
 import IntroLogo from '../../components/IntroLogo/index'
 import ContactInfo from '../../components/ContactInfo/index'
-import AuthForm from '../../containers/AuthForm/index'
+import LogForm from '../../containers/LogForm/index'
 import RegForm from '../../containers/RegForm/index'
 
 import { Page,
@@ -23,11 +23,13 @@ function AuthPage() {
           <HugeText>
             <h1>Welcome to <ImportantText styledColor='#ef8e4d'>FriendShell</ImportantText>!</h1>
           </HugeText>
+
           <Route exact={true} path="/" render={() => (
-            <Redirect to='/auth' />
+            <Redirect to='/auth/login' />
           )} />
-          <Route path="/auth" component={AuthForm} />
-          <Route path="/register" component={RegForm} />
+          <Route path="/auth/login" component={LogForm} />
+          <Route path="/auth/register" component={RegForm} />
+          
           <Info>
             <h1>About the developer</h1>
             <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit,

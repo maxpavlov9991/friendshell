@@ -138,7 +138,7 @@ class RegForm extends Component {
           <h3> If you have an account, sign in:</h3>
           <StyledLink
             orange
-            to='/auth'>I have an account</StyledLink>
+            to='/auth/login'>I have an account</StyledLink>
         </Form>
       </div>
     )

@@ -6,7 +6,3 @@ export const Page = styled.div`
   min-height: 100vh;
   background-color: #031b35;
 `
-
-export const Content = styled.div`
-
-`
