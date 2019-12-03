@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 export const Content = styled.div`
   width: 100%;
-  background-color: transparent;
   margin: 0 auto;
   min-height: 100vh;
 

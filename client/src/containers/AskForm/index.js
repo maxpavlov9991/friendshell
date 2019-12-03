@@ -19,7 +19,7 @@ class AskForm extends Component {
       <AskFormWrap>
         <Form>
           <AskInput placeholder='Your question?'></AskInput>
-          <AskButton disabled={false}>Send</AskButton>
+          <AskButton disabled={false}>&#10004;</AskButton>
         </Form>
       </AskFormWrap>
     )
