@@ -10,7 +10,7 @@ export const Questions = styled.ul`
   }
 
   > li:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 `
 
@@ -21,8 +21,6 @@ export const QuestionWrap = styled.div`
     'info'
     'question'
     'answer';
-
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 
   position: relative;
   :before{
@@ -126,6 +124,9 @@ export const AnswerButton = styled.button`
   background-color: coral;
   outline: none;
   transition: 0.2s color, 0.2s background-color;
+  font-size: 30px;
+  text-align: center;
+  padding: 0;
 
   :hover {
     color: black;

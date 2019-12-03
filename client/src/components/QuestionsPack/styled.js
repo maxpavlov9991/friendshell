@@ -29,5 +29,5 @@ export const Label = styled.div`
 export const QuestWrap = styled.div`
   width: 800px;
   padding: 20px;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
 `

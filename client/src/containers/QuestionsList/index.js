@@ -27,8 +27,8 @@ class QuestionsList extends Component {
             <Info>21.03.2019</Info>
             <Question>How are you?</Question>
             <AnswerWrap>
-              <AnswerTextArea placeholder='Answer...' />
-              <AnswerButton>Answer!</AnswerButton>
+              <AnswerTextArea placeholder='Your answer...' />
+              <AnswerButton>&#10004;</AnswerButton>
             </AnswerWrap>
           </QuestionWrap>
         </li>
@@ -39,8 +39,8 @@ class QuestionsList extends Component {
             <Info>19.03.2019</Info>
             <Question>What is your favorite color?</Question>
             <AnswerWrap>
-              <AnswerTextArea placeholder='Answer...' />
-              <AnswerButton>Answer!</AnswerButton>
+              <AnswerTextArea placeholder='Your answer...' />
+              <AnswerButton>&#10004;</AnswerButton>
             </AnswerWrap>
           </QuestionWrap>
         </li>
@@ -51,8 +51,8 @@ class QuestionsList extends Component {
             <Info>30.02.2019</Info>
             <Question>Do you ever have seX????</Question>
             <AnswerWrap>
-              <AnswerTextArea placeholder='Answer...' />
-              <AnswerButton>Answer!</AnswerButton>
+              <AnswerTextArea placeholder='Your answer...' />
+              <AnswerButton>&#10004;</AnswerButton>
             </AnswerWrap>
           </QuestionWrap>
         </li>
@@ -63,8 +63,8 @@ class QuestionsList extends Component {
             <Info>15.02.2019</Info>
             <Question>Happy birthday! How old are you?</Question>
             <AnswerWrap>
-              <AnswerTextArea placeholder='Answer...' />
-              <AnswerButton>Answer!</AnswerButton>
+              <AnswerTextArea placeholder='Your answer...' />
+              <AnswerButton>&#10004;</AnswerButton>
             </AnswerWrap>
           </QuestionWrap>
         </li>
@@ -75,8 +75,8 @@ class QuestionsList extends Component {
             <Info>03.02.2019</Info>
             <Question>Heh, where you hide you money?? )))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))</Question>
             <AnswerWrap>
-              <AnswerTextArea placeholder='Answer...' />
-              <AnswerButton>Answer!</AnswerButton>
+              <AnswerTextArea placeholder='Your answer...' />
+              <AnswerButton>&#10004;</AnswerButton>
             </AnswerWrap>
           </QuestionWrap>
         </li>
@@ -87,8 +87,8 @@ class QuestionsList extends Component {
             <Info>01.01.2019</Info>
             <Question>Do you fap?</Question>
             <AnswerWrap>
-              <AnswerTextArea placeholder='Answer...' />
-              <AnswerButton>Answer!</AnswerButton>
+              <AnswerTextArea placeholder='Your answer...' />
+              <AnswerButton>&#10004;</AnswerButton>
             </AnswerWrap>
           </QuestionWrap>
         </li>
