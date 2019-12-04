@@ -4,6 +4,7 @@ export const Questions = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 
   > li {
     background-color: #020f1d;
@@ -15,6 +16,7 @@ export const Questions = styled.ul`
 `
 
 export const QuestionWrap = styled.div`
+
   display: grid;
   gap: 10px;
   grid-template-areas: 
@@ -23,18 +25,26 @@ export const QuestionWrap = styled.div`
     'answer';
 
   position: relative;
+  transition: 0.2s background-color;
+
   :before{
     content: '';
     position: absolute;
     width: 0px;
     height: 100%;
     background-color: coral;
-    transition: 0.2s width;
-    z-index: 20;
+    transition: 0.2s width, 0.2s background-color;
   }
-  :focus-within:before{
+  :hover:before {
+    background-color: coral;
     width: 5px;
   }
+  
+  :focus-within:before{
+    background-color: yellow;
+    width: 5px;
+  }
+
 `
 export const DeleteButton = styled.button`
 
@@ -86,19 +96,46 @@ export const Question = styled.div`
 `
 
 export const AnswerWrap = styled.div`
+  @media (min-width: 992px) {
+    grid-template-areas: 'answer-text answer-button';
+    grid-template-columns: 90% 10%;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    grid-template-areas: 'answer-text answer-button';
+    grid-template-columns: 85% 15%;
+  }
+
+  @media (max-width: 479px) {
+    grid-template-areas: 'answer-text answer-button';
+    grid-template-columns: 80% 20%;
+  }
+
   grid-area: answer;
   display: grid;
-  grid-template-areas: 'answer-text answer-button';
-  grid-template-columns: 90% 10%;
-
-
 `
 
 export const AnswerTextArea = styled.textarea`
+
+  @media (min-width: 992px) {
+    height: 50px;
+    font-size: 17px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 479px) {
+    height: 30px;
+    font-size: 12px;
+  }
+  
   grid-area: answer-text;
   resize: none;
   height: 50px;
-  background-color: #020f1d;
+  background-color: transparent;
   color: white;
   font-weight: bold;
   border: none;

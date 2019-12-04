@@ -19,7 +19,17 @@ export const Content = styled.div`
 `
 
 export const Label = styled.div`
-  width: 800px;
+  @media (min-width: 992px) {
+    width: 800px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    width: 80%;
+  }
+
+  @media (max-width: 479px) {
+    width: 90%;
+  }
   margin: 0 auto;
   text-align: center;
   color: white;
@@ -27,7 +37,18 @@ export const Label = styled.div`
 `
 
 export const QuestWrap = styled.div`
-  width: 800px;
-  padding: 20px;
+
+    @media (min-width: 992px) {
+      width: 800px;
+    }
+
+    @media (max-width: 991px) and (min-width: 480px) {
+      width: 80%;
+    }
+
+    @media (max-width: 479px) {
+      width: 90%;
+    }
+
   margin: 0 auto;
 `

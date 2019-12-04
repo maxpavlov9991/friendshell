@@ -10,13 +10,27 @@ export const AskFormWrap = styled.div`
 `
 
 export const Form = styled.div`
+
+    @media (min-width: 992px) {
+      
+      grid-template-areas: 'input button';
+      grid-template-columns: 90% 10%;
+    }
+
+    @media (max-width: 991px) and (min-width: 480px) {
+      grid-template-areas: 'input button';
+      grid-template-columns: 85% 15%;
+    }
+
+    @media (max-width: 479px) {
+      grid-template-areas:
+        'input'
+        'button';
+      grid-template-columns: 100%;
+    }
+
   display: grid;
-  grid-template-areas: 'input button';
-  grid-template-columns: 1fr 10%;
-
   width: 80%;
-
-
   min-width: 300px;
   margin: 0 auto;
   position: relative;
@@ -24,16 +38,30 @@ export const Form = styled.div`
 
 export const AskInput = styled.textarea`
 
+    @media (min-width: 992px) {
+      height: 45px;
+      font-size: 18px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 991px) and (min-width: 480px) {
+      height: 35px;
+      font-size: 15px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 479px) {
+      height: 30px;
+      font-size: 12px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
   font-weight: bold;
   resize: none;
-  height: 30px;
-  font-size: 18px;
   padding: 10px 20px;
   background-color: rgba(50, 49, 66, 0.9);
   color: white;
   outline: none;
   border: none;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   transition: 0.2s height;
 
@@ -53,7 +81,6 @@ export const AskInput = styled.textarea`
 `
 
 export const AskButton = styled.button`
-  min-width: 100px;
   height: 100%;
   font-size: 40px;
   padding: 0;

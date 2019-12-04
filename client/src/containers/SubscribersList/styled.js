@@ -15,22 +15,42 @@ export const Person = styled(Link)`
   gap: 20px;
   padding: 20px;
 
-  :before{
+  :before {
+      content: '';
+      background-color: rgba(0,0,0,0.2);
+      height: 2px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+  :after{
     content: '';
     position: absolute;
     width: 0px;
     height: 100%;
     background-color: coral;
-    transition: 0.2s width;
+    transition: 0.2s width, 0.2s background-color;
   }
 
-  :hover:before{
+  :hover:after {
+    width: 5px;
+  }
+  
+  :focus-within:after{
+    background-color: yellow;
     width: 5px;
   }
   
   :hover {
     > div {
       color: coral;
+    }
+  }
+
+  :focus {
+    > div {
+      color: yellow;
     }
   }
 
