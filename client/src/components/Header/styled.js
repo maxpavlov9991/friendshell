@@ -51,6 +51,9 @@ export const StyledLink = styled(Link)`
   @media (max-width: 991px) and (min-width: 480px) {
     line-height: 50px;
   }
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;      
 
   color: white;
   text-decoration: none;

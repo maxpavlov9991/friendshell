@@ -20,6 +20,7 @@ function AuthPage() {
         <IntroLogo/>
       </LogoWrapper>
       <Content>
+        
           <HugeText>
             <h1>Welcome to <ImportantText styledColor='#ef8e4d'>FriendShell</ImportantText>!</h1>
           </HugeText>

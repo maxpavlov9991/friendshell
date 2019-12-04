@@ -2,9 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Form = styled.div`
-  width: 360px;
   margin: auto;
-  padding-bottom: 50px;
 
   > * {
     display: block;
@@ -12,17 +10,54 @@ export const Form = styled.div`
 
   > :not(:last-child) {
     margin-bottom: 25px;
-    }
+  }
+
+  @media (min-width: 992px) {
+    width: 360px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    width: 300px;
+    padding-bottom: 35px;
+  }
+
+  @media (max-width: 479px) {
+    width: 240px;
+    padding-bottom: 25px;
+  }
 `
 
+
 export const StyledButton = styled.button`
+
+  @media (min-width: 992px) {
+    width: 320px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 23px;
+  }
+
+  @media (max-width: 479px) {
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+  }
+
+  padding: 0;
+  margin: 0 auto;
+
+  float: center;
   display: block;
-  width: 320px;
   color: black;
-  height: 60px;
-  line-height: 60px;
-  font-size: 30px;
-  margin: auto;
   outline: none;
   cursor: pointer;
   border: none; 
@@ -39,15 +74,35 @@ export const StyledButton = styled.button`
 `
 
 export const StyledLink = styled(Link)`
+
+  @media (min-width: 992px) {
+    width: 320px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 23px;
+  }
+
+  @media (max-width: 479px) {
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+  }
+
+  float: center;
   display: block;
   color: black;
   text-align: center;
   text-decoration: none;
-  width: 320px;
-  height: 60px;
-  line-height: 60px;
-  font-size: 30px;
-  margin: auto;
+  padding: 0;
+  margin: 0 auto;
   outline: none;
   border: none; 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -66,16 +121,36 @@ export const StyledLink = styled(Link)`
 export const ImportantText = styled.span`
   color: ${props => props.styledColor};
 `
-
 export const StyledInput = styled.input`
 
+  @media (min-width: 992px) {
+    width: 320px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 23px;
+  }
+
+  @media (max-width: 479px) {
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+  }
+
+  float: center;
+  padding: 0;
+  margin: 0 auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  width: 360px;
-  height: 60px;
   outline: none;
   border: none;
   text-align: center;
-  font-size: 30px;
   line-height: 100%;
 
   ::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}

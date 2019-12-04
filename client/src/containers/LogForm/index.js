@@ -121,7 +121,11 @@ class LogForm extends Component {
         <StyledLink
           orange
           to='/auth/register'>Create an account</StyledLink>
+        <StyledLink
+          orange
+          to='/main'>skip >></StyledLink>
       </Form>
+
     )
   }
 }

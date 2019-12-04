@@ -23,7 +23,7 @@ class User extends Component {
 
   render() {
     return (
-      <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/1back.jpg") + `)`}>
+      <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/back.jpg") + `)`}>
         <UserInfo>
 
           <Avatar src={require("../../media/img/4YnwRWs_S8E.jpg")} alt='name' />
