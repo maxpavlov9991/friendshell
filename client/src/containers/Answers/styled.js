@@ -52,6 +52,7 @@ export const AnswerWrap = styled.div`
 
   display: grid;
   margin: 0 auto;
+  position: relative;
   grid-template-areas:
     'question'
     'answer'
@@ -59,10 +60,35 @@ export const AnswerWrap = styled.div`
   background-color: #020f1d;
   box-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  transition: 0.3s box-shadow;
+  transition: 0.2s box-shadow;
   :hover {
     box-shadow: 2px 2px 0 rgba(255, 127, 80, 0.5);
   }
+`
+
+export const DeleteButton = styled.button`
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  padding: 0;
+  line-height: 15px;
+  font-size: 10px;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  box-shadow: none;
+  transition: 0.2s background-color, 0.2s color;
+
+  :focus, :hover {
+    background-color: rgb(141, 0, 0);
+    color: #020f1d;
+  }
+
 `
 
 export const Question = styled.div`

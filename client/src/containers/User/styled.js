@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 
 export const UserInfoWrapper = styled.div`
   @media (min-width: 992px) {
@@ -151,48 +153,19 @@ export const Name = styled.div`
   color: white;
   background-color: rgba(3, 27, 53, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
 `
 
 export const Sub = styled.div`
   display: grid;
   grid-template-areas:
-    'subscribers subscriptions';
+    'subscriptions subscribers';
   
   background-color: rgba(3, 27, 53, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 
 `
-
-export const Subscribers = styled.div`
-
-@media (min-width: 992px) {
-    padding: 15px 0 15px 0;
-    font-size: 20px;
-  }
-
-  @media (max-width: 991px) and (min-width: 480px) {
-    padding: 10px 0 10px 0;
-    font-size: 18px;
-  }
-
-  @media (max-width: 479px) {
-    padding: 10px 0 10px 0;
-    font-size: 15px;
-  }
-
-  grid-area: subscribers;
-  color: white;
-  font-weight: bold;
-  align-self: center;
-  justify-self: center;
-
-  > p {
-    margin: 0;
-    text-align: center;
-  }
-
-`
-export const Subscriptions = styled.div`
+export const Subscriptions = styled(Link)`
 
   @media (min-width: 992px) {
     padding: 15px 0 15px 0;
@@ -209,7 +182,48 @@ export const Subscriptions = styled.div`
     font-size: 15px;
   }
 
+  text-decoration: none;
   grid-area: subscriptions;
+  color: white;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+  transition: 0.2s color;
+  :hover{
+    color: coral;
+  }
+
+  > p {
+    margin: 0;
+    text-align: center;
+  }
+
+`
+
+export const Subscribers = styled(Link)`
+
+@media (min-width: 992px) {
+    padding: 15px 0 15px 0;
+    font-size: 20px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+  }
+
+  @media (max-width: 479px) {
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+  }
+  
+  transition: 0.2s color;
+  :hover{
+    color: coral;
+  }
+
+  text-decoration: none;
+  grid-area: subscribers;
   color: white;
   font-weight: bold;
   align-self: center;
@@ -217,9 +231,11 @@ export const Subscriptions = styled.div`
 
   > p {
     margin: 0;
-    text-align: center
+    text-align: center;
   }
+
 `
+
 
 export const FollowButton = styled.button`
 
@@ -276,7 +292,7 @@ export const InfoLabel = styled.div`
   font-weight: bold;
   word-wrap: break-word;
   white-space: pre-wrap;
-  color: #EFEFEF;
+  color: white;
   align-self: start;
   justify-self: start;
 `
@@ -298,7 +314,7 @@ export const InfoValue = styled.div`
   grid-area: value;
   word-wrap: break-word;
   white-space: pre-wrap;
-  color: white;
+  color: #DFDFDF;
   align-self: center;
   justify-self: end;
 `

@@ -13,11 +13,11 @@ import {
 function IntroLogo() {
   return (
     <Logo>
-      <object className='ellipse1' type="image/svg+xml" data={ellipse1} width="500" height="500" ></object>
-      <object className='ellipse2' type="image/svg+xml" data={ellipse2} width="400" height="400" ></object>
-      <object className='ellipse3' type="image/svg+xml" data={ellipse3} width="300" height="300" ></object>
+      <object className='ellipse1' type="image/svg+xml" data={ellipse1} ></object>
+      <object className='ellipse2' type="image/svg+xml" data={ellipse2} ></object>
+      <object className='ellipse3' type="image/svg+xml" data={ellipse3} ></object>
       <LogoText>
-        <object className='logotext' type="image/svg+xml" data={logotext} width="700" height="120" ></object>
+        <object className='logotext' type="image/svg+xml" data={logotext} ></object>
       </LogoText>
     </Logo>
   )

@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import {
-    AskFormWrap,
-    Form,
-    AskTitle,
-    AskInput,
-    AskButton
+  AskFormWrap,
+  Form,
+  AskTitle,
+  AskInput,
+  AskButton
 } from './styled'
 
-function AskForm() {
-  return (
-    <AskFormWrap>
+class AskForm extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  render() {
+    return (
+      <AskFormWrap>
         <Form>
           <AskInput placeholder='Your question?'></AskInput>
-          <AskButton>Send</AskButton>
+          <AskButton disabled={false}>&#10004;</AskButton>
         </Form>
-    </AskFormWrap>
-  )
+      </AskFormWrap>
+    )
+  }
+
 }
 
-export default AskForm;
+export default connect(
+  (state) => {
+    return {
+    }
+  },
+  (dispatch) => {
+    return {
+    }
+  })(AskForm)

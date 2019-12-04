@@ -20,7 +20,7 @@ import {
   StyledInput
 } from './styled'
 
-class AuthForm extends Component {
+class LogForm extends Component {
   constructor(props) {
     super(props)
     this.handleKeyDown = this.handleKeyDown.bind(this)
@@ -120,8 +120,12 @@ class AuthForm extends Component {
         <h3> If you haven't an account, please, register:</h3>
         <StyledLink
           orange
-          to='/register'>Create an account</StyledLink>
+          to='/auth/register'>Create an account</StyledLink>
+        <StyledLink
+          orange
+          to='/main'>skip >></StyledLink>
       </Form>
+
     )
   }
 }
@@ -151,4 +155,4 @@ export default connect(
         dispatch(userAuthSetMyInfo(body))
       }
     }
-  })(AuthForm)
+  })(LogForm)

@@ -41,17 +41,17 @@ class RegForm extends Component {
     if (event.keyCode === 13 || event.keyCode === 38 || event.keyCode === 40) {
       switch (event.target) {
         case this.loginInput:
-          if (event.keyCode === 13 || event.keyCode === 40) {this.emailInput.focus()}
-          else {this.loginInput.blur()}
+          if (event.keyCode === 13 || event.keyCode === 40) { this.emailInput.focus() }
+          else { this.loginInput.blur() }
           break
         case this.emailInput:
-            if (event.keyCode === 13 || event.keyCode === 40) {this.passwordInput.focus()}
-            else {this.loginInput.focus()}
+          if (event.keyCode === 13 || event.keyCode === 40) { this.passwordInput.focus() }
+          else { this.loginInput.focus() }
           break
         case this.passwordInput:
-            if (event.keyCode === 13) {this.handleSignUp()}
-            else if (event.keyCode === 40) {this.passwordInput.blur()}
-            else {this.emailInput.focus()}
+          if (event.keyCode === 13) { this.handleSignUp() }
+          else if (event.keyCode === 40) { this.passwordInput.blur() }
+          else { this.emailInput.focus() }
           break
         default:
           break
@@ -138,7 +138,10 @@ class RegForm extends Component {
           <h3> If you have an account, sign in:</h3>
           <StyledLink
             orange
-            to='/auth'>I have an account</StyledLink>
+            to='/auth/login'>I have an account</StyledLink>
+          <StyledLink
+            orange
+            to='/main'>skip >></StyledLink>
         </Form>
       </div>
     )
