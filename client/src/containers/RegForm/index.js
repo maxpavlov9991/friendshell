@@ -29,6 +29,7 @@ class RegForm extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {

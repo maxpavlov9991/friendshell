@@ -20,10 +20,14 @@ class User extends Component {
     super(props)
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
 
   render() {
     return (
-      <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/back.jpg") + `)`}>
+      <UserInfoWrapper backgroundImage={`url(` + require("../../media/img/1back.jpg") + `)`}>
         <UserInfo>
 
           <Avatar src={require("../../media/img/4YnwRWs_S8E.jpg")} alt='name' />

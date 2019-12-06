@@ -63,6 +63,9 @@ export const SubList = styled.div`
 `
 export const SubscriberLink = styled(Link)`
 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  outline: none;
   color: white;
   text-decoration: none;
   justify-self: center;
@@ -77,8 +80,11 @@ export const SubscriberLink = styled(Link)`
 `
 
 export const SubscriptionLink = styled(Link)`
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
   color: white;
   text-decoration: none;
+  outline: none;
   justify-self: center;
   align-self: center;
   grid-area: subscriptions;

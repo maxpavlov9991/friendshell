@@ -154,6 +154,7 @@ export const Name = styled.div`
   background-color: rgba(3, 27, 53, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
+  border-radius: 30px;
 `
 
 export const Sub = styled.div`
@@ -163,6 +164,8 @@ export const Sub = styled.div`
   
   background-color: rgba(3, 27, 53, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+
+  border-radius: 30px;
 
 `
 export const Subscriptions = styled(Link)`
@@ -182,6 +185,8 @@ export const Subscriptions = styled(Link)`
     font-size: 15px;
   }
 
+
+  outline: none;
   text-decoration: none;
   grid-area: subscriptions;
   color: white;
@@ -222,6 +227,8 @@ export const Subscribers = styled(Link)`
     color: coral;
   }
 
+
+  outline: none;
   text-decoration: none;
   grid-area: subscribers;
   color: white;
@@ -257,11 +264,15 @@ export const FollowButton = styled.button`
     margin: 10px 0 10px 0;
   }
 
+
+  border-radius: 25px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   grid-area: follow-btn;
   border: none;
   background-color: #a7e4a9;
   color: black;
+
+  cursor: pointer;
   outline: none;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   align-self: center;

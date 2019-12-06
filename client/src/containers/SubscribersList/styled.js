@@ -12,6 +12,7 @@ export const Person = styled(Link)`
   display: grid;
   grid-template-areas: 'photo info';
   grid-template-columns: 75px 1fr;
+  outline: none;
   gap: 20px;
   padding: 20px;
 

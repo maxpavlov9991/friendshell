@@ -29,6 +29,11 @@ function SubsPack() {
         <Route path="/main/subs/subscriptions" component={SubscriptionList}/>
       </SubList>
 
+      <SwitchSub>
+        <SubscriptionLink selected={true} to='/main/subs/subscriptions'>Subscriptions</SubscriptionLink>
+        <SubscriberLink to='/main/subs/subscribers'>Subscribers</SubscriberLink>
+      </SwitchSub>
+
     </Content>
   )
 }

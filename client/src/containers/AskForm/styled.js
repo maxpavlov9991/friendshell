@@ -14,21 +14,20 @@ export const Form = styled.div`
     @media (min-width: 992px) {
       
       grid-template-areas: 'input button';
-      grid-template-columns: 90% 10%;
+      grid-template-columns: 1fr 65px;
     }
 
     @media (max-width: 991px) and (min-width: 480px) {
       grid-template-areas: 'input button';
-      grid-template-columns: 85% 15%;
+      grid-template-columns: 1fr 55px;
     }
 
     @media (max-width: 479px) {
-      grid-template-areas:
-        'input'
-        'button';
-      grid-template-columns: 100%;
+      grid-template-areas: 'input button';
+      grid-template-columns: 1fr 45px;
     }
 
+  gap: 20px;
   display: grid;
   width: 80%;
   min-width: 300px;
@@ -55,7 +54,9 @@ export const AskInput = styled.textarea`
       font-size: 12px;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     }
+
   font-weight: bold;
+  border-radius: 30px;
   resize: none;
   padding: 10px 20px;
   background-color: rgba(50, 49, 66, 0.9);
@@ -81,9 +82,25 @@ export const AskInput = styled.textarea`
 `
 
 export const AskButton = styled.button`
-  height: 100%;
-  font-size: 40px;
+
+@media (min-width: 992px) {
+    height: 65px;
+  }
+
+  @media (max-width: 991px) and (min-width: 480px) {
+    height: 55px;
+  }
+
+  @media (max-width: 479px) {
+    height: 45px;
+  }
+
+  font-size: 30px;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
   padding: 0;
+  border-radius: 50%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   background-color: ${(props) => (props.disabled) ? 'gray' : 'coral'};
   border: none;

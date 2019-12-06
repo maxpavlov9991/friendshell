@@ -8,6 +8,7 @@ export const Questions = styled.ul`
 
   > li {
     background-color: #020f1d;
+    border-radius: 30px;
   }
 
   > li:not(:last-child) {
@@ -26,23 +27,20 @@ export const QuestionWrap = styled.div`
 
   position: relative;
   transition: 0.2s background-color;
-
   :before{
     content: '';
     position: absolute;
-    width: 0px;
-    height: 100%;
+    width: 0;
+    top: 25%;
+    height: 50%;
     background-color: coral;
-    transition: 0.2s width, 0.2s background-color;
+    transition: 0.2s height, 0.2s background-color;
   }
-  :hover:before {
-    background-color: coral;
-    width: 5px;
-  }
+
   
   :focus-within:before{
     background-color: yellow;
-    width: 5px;
+    width: 2px;
   }
 
 `
@@ -50,6 +48,7 @@ export const DeleteButton = styled.button`
 
   position: absolute;
   width: 20px;
+  border-radius: 50%;
   padding: 0;
   line-height: 20px;
   font-size: 10px;
@@ -59,8 +58,8 @@ export const DeleteButton = styled.button`
   border: none;
   text-align: center;
   height: 20px;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   box-shadow: none;
   transition: 0.2s background-color, 0.2s color;
 
@@ -98,21 +97,22 @@ export const Question = styled.div`
 export const AnswerWrap = styled.div`
   @media (min-width: 992px) {
     grid-template-areas: 'answer-text answer-button';
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 1fr 60px;
   }
 
   @media (max-width: 991px) and (min-width: 480px) {
     grid-template-areas: 'answer-text answer-button';
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 1fr 45px;
   }
 
   @media (max-width: 479px) {
     grid-template-areas: 'answer-text answer-button';
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 1fr 40px;
   }
 
   grid-area: answer;
   display: grid;
+
 `
 
 export const AnswerTextArea = styled.textarea`
@@ -155,6 +155,7 @@ export const AnswerTextArea = styled.textarea`
 
 export const AnswerButton = styled.button`
   grid-area: answer-button;
+  border-radius: 50%;
   border: none;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

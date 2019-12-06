@@ -10,6 +10,7 @@ export const Person = styled(Link)`
   text-decoration: none;
   position: relative;
   display: grid;
+  outline: none;
 
   @media (min-width: 992px) {
     grid-template-areas: 'photo info';

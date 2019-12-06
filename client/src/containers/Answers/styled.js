@@ -59,7 +59,7 @@ export const AnswerWrap = styled.div`
     'info';
   background-color: #020f1d;
   box-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  border-radius: 25px;
   transition: 0.2s box-shadow;
   :hover {
     box-shadow: 2px 2px 0 rgba(255, 127, 80, 0.5);
@@ -75,12 +75,13 @@ export const DeleteButton = styled.button`
   font-size: 10px;
   outline: none;
   color: white;
+  cursor: pointer;
   background-color: transparent;
   border: none;
   text-align: center;
   height: 20px;
   top: 5px;
-  right: 5px;
+  right: 10px;
   box-shadow: none;
   transition: 0.2s background-color, 0.2s color;
 
@@ -93,15 +94,15 @@ export const DeleteButton = styled.button`
 
 export const Question = styled.div`
   @media (min-width: 992px) {
-    padding: 15px 25px 0 25px;
+    padding: 15px 40px 0 25px;
   }
 
   @media (max-width: 991px) and (min-width: 480px) {
-    padding: 15px 10px 0 10px;
+    padding: 15px 40px 0 10px;
   }
 
   @media (max-width: 479px) {
-    padding: 10px 10px 0 10px;
+    padding: 10px 40px 0 10px;
   }
 
   align-self: center;
