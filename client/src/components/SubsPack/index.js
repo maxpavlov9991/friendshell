@@ -9,12 +9,15 @@ import {
   SwitchSub,
   SubList,
   SubscriberLink,
-  SubscriptionLink
+  SubscriptionLink,
+  Label
 } from './styled'
 
 function SubsPack() {
   return (
     <Content>
+
+      <Label>My Subs:</Label>
 
       <SwitchSub>
         <SubscriptionLink selected={true} to='/main/subs/subscriptions'>Subscriptions</SubscriptionLink>

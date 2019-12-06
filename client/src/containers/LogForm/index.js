@@ -30,7 +30,7 @@ class LogForm extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
-
+  
   componentWillUnmount() {
     this.props.setMessage('')
     this.props.setStatusNormal()
@@ -101,7 +101,7 @@ class LogForm extends Component {
     return (
       <Form>
         <h1>Account Log In</h1>
-        <h3>Please enter your account details below and click <ImportantText styledColor='#a7e4a9'>Log in</ImportantText> button!</h3>
+        <h3>Please enter your account details below and click <ImportantText styledcolor='#a7e4a9'>Log in</ImportantText> button!</h3>
         <h3>Login:</h3>
         <StyledInput
           ref={(loginInput) => { this.loginInput = loginInput }}
@@ -115,15 +115,15 @@ class LogForm extends Component {
           placeholder='********'
           onKeyDown={this.handleKeyDown}></StyledInput>
         <StyledButton
-          green
+          styledcolor='green'
           onClick={this.handleLogIn}> Log In! </StyledButton>
         <h1>{this.props.message}</h1>
         <h3> If you haven't an account, please, register:</h3>
         <StyledLink
-          orange
+          styledcolor='orange'
           to='/auth/register'>Create an account</StyledLink>
         <StyledLink
-          orange
+          styledcolor='orange'
           to='/main'>skip >></StyledLink>
       </Form>
 
