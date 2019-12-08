@@ -40,22 +40,16 @@ class User extends Component {
               <li><InfoLabel>Birthday:</InfoLabel><InfoValue>11.04.2009</InfoValue></li>
               <li><InfoLabel>City:</InfoLabel><InfoValue>Krasnoyarsk</InfoValue></li>
               <li><InfoLabel>University:</InfoLabel><InfoValue>ITMO</InfoValue></li>
-              <li><InfoLabel>Website:</InfoLabel><InfoValue>https://github.com/maxpavlov9991https://github.com/maxpavlov9991https://github.com/maxpavlov9991</InfoValue></li>
-              <li><InfoLabel>Age:</InfoLabel><InfoValue>ITMOasdasdasdasdasd</InfoValue></li>
-              <li><InfoLabel>Indicator:</InfoLabel><InfoValue>ITMOasdasdasdasd</InfoValue></li>
-              <li><InfoLabel>Work:</InfoLabel><InfoValue>ITMO</InfoValue></li>
-              <li><InfoLabel>ASDASD:</InfoLabel><InfoValue>sdasd</InfoValue></li>
             </ul>
-
             <Sub>
               
               <Subscriptions to='/main/subs/subscriptions'>
                 <p>Subscriptions:</p>
-                <p>12312</p>
+                <p>234</p>
               </Subscriptions>
               <Subscribers to='/main/subs/subscribers'>
                 <p>Subscribers:</p>
-                <p>12312</p>
+                <p>307</p>
               </Subscribers>
               
             </Sub>

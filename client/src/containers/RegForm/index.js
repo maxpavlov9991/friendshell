@@ -112,7 +112,7 @@ class RegForm extends Component {
       <div>
         <Form>
           <h1>Registration</h1>
-          <h3>Please enter your details below and click <ImportantText styledColor='#a7e4a9'>Sign up</ImportantText> button!</h3>
+          <h3>Please enter your details below and click <ImportantText styledcolor='#a7e4a9'>Sign up</ImportantText> button!</h3>
           <h3>Login:</h3>
           <StyledInput
             ref={(loginInput) => { this.loginInput = loginInput }}
@@ -132,17 +132,17 @@ class RegForm extends Component {
             placeholder='*********'
             onKeyDown={this.handleKeyDown}></StyledInput>
           <StyledButton
-            green
+            styledcolor='green'
             onClick={this.handleSignUp}>Sign Up!</StyledButton>
           <h1>{this.props.status}</h1>
           <h2>{this.props.message}</h2>
           <h3> If you have an account, sign in:</h3>
           <StyledLink
-            orange
+            styledcolor='orange'
             to='/auth/login'>I have an account</StyledLink>
           <StyledLink
-            orange
-            to='/main'>skip >></StyledLink>
+            styledcolor='orange'
+            to='/main'>Later</StyledLink>
         </Form>
       </div>
     )

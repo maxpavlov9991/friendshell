@@ -29,7 +29,7 @@ class QuestionsList extends Component {
           <QuestionWrap>
             <DeleteButton>&#10006;</DeleteButton>
             <Info>21.03.2019</Info>
-            <Question>How are you?</Question>
+            <Question>Want to be a member of a reality show? if so, which one?</Question>
             <AnswerWrap>
               <AnswerTextArea placeholder='Your answer...' />
               <AnswerButton>&#10004;</AnswerButton>
@@ -41,7 +41,7 @@ class QuestionsList extends Component {
           <QuestionWrap>
             <DeleteButton>&#10006;</DeleteButton>
             <Info>19.03.2019</Info>
-            <Question>What is your favorite color?</Question>
+            <Question>Is the house perfect or is there a lot of trash?</Question>
             <AnswerWrap>
               <AnswerTextArea placeholder='Your answer...' />
               <AnswerButton>&#10004;</AnswerButton>
@@ -53,7 +53,7 @@ class QuestionsList extends Component {
           <QuestionWrap>
             <DeleteButton>&#10006;</DeleteButton>
             <Info>30.02.2019</Info>
-            <Question>Do you ever have seX????</Question>
+            <Question>What can not be thrown into the trash?</Question>
             <AnswerWrap>
               <AnswerTextArea placeholder='Your answer...' />
               <AnswerButton>&#10004;</AnswerButton>
@@ -65,7 +65,7 @@ class QuestionsList extends Component {
           <QuestionWrap>
             <DeleteButton>&#10006;</DeleteButton>
             <Info>15.02.2019</Info>
-            <Question>Happy birthday! How old are you?</Question>
+            <Question>How old is youth?</Question>
             <AnswerWrap>
               <AnswerTextArea placeholder='Your answer...' />
               <AnswerButton>&#10004;</AnswerButton>
@@ -77,7 +77,7 @@ class QuestionsList extends Component {
           <QuestionWrap>
             <DeleteButton>&#10006;</DeleteButton>
             <Info>03.02.2019</Info>
-            <Question>Heh, where you hide you money?? )))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))</Question>
+            <Question>How many concerts have you been to this year?</Question>
             <AnswerWrap>
               <AnswerTextArea placeholder='Your answer...' />
               <AnswerButton>&#10004;</AnswerButton>
@@ -89,7 +89,7 @@ class QuestionsList extends Component {
           <QuestionWrap>
             <DeleteButton>&#10006;</DeleteButton>
             <Info>01.01.2019</Info>
-            <Question>Do you fap?</Question>
+            <Question>Who do you communicate with on Facebook most often?</Question>
             <AnswerWrap>
               <AnswerTextArea placeholder='Your answer...' />
               <AnswerButton>&#10004;</AnswerButton>

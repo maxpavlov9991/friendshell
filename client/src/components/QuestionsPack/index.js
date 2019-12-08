@@ -10,7 +10,7 @@ import {
 function QuestionsPack() {
   return (
     <Content>
-      <Label><h1>My Questons:</h1></Label>
+      <Label>My Questons:</Label>
       <QuestWrap>
         <QuestionList/>
       </QuestWrap>

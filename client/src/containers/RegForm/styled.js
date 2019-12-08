@@ -64,13 +64,13 @@ export const StyledButton = styled.button`
   border: none; 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: ${props => (props.green ? '#7ded81' :
-    (props.orange) ? '#ef8e4d' : 'white')};
+  background-color: ${props => ((props.styledcolor === 'green') ? '#7ded81' :
+    (props.styledcolor === 'orange') ? '#ef8e4d' : 'white')};
 
   :hover {
     transition: 0.2s background-color, 0.2s color;
-    background-color: ${props => (props.green ? 'white' :
-    (props.orange) ? 'white' : 'white')};
+    background-color: ${props => ((props.styledcolor === 'green') ? 'white' :
+    (props.styledcolor === 'orange') ? 'white' : 'white')};
   }
 `
 
@@ -108,20 +108,21 @@ export const StyledLink = styled(Link)`
   outline: none;
   border: none; 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: coral;
   transition: 0.2s background-color, 0.2s color;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: ${props => ((props.styledcolor === 'green') ? '#7ded81' :
+    (props.styledcolor === 'orange') ? '#ef8e4d' : 'white')};
 
   :hover {
     transition: 0.2s background-color;
     color: black;
-    background-color: ${props => (props.green ? 'white' :
-    (props.orange) ? '#f88379' : 'white')};
+    background-color: ${props => ((props.styledcolor==='green') ? 'white' :
+    (props.styledcolor === 'orange') ? '#f88379' : 'white')};
   }
 `
 
 export const ImportantText = styled.span`
-  color: ${props => props.styledColor};
+  color: ${props => props.styledcolor};
 `
 export const StyledInput = styled.input`
 
@@ -156,10 +157,10 @@ export const StyledInput = styled.input`
   text-align: center;
   line-height: 100%;
 
-  ::-webkit-input-placeholder       {opacity: 0.5; transition: opacity 0.3s ease;}
-  ::-moz-placeholder                {opacity: 0.5; transition: opacity 0.3s ease;}
-  :-moz-placeholder                 {opacity: 0.5; transition: opacity 0.3s ease;}
-  :-ms-input-placeholder            {opacity: 0.5; transition: opacity 0.3s ease;}
+  ::-webkit-input-placeholder       {opacity: 0.8; transition: opacity 0.3s ease;}
+  ::-moz-placeholder                {opacity: 0.8; transition: opacity 0.3s ease;}
+  :-moz-placeholder                 {opacity: 0.8; transition: opacity 0.3s ease;}
+  :-ms-input-placeholder            {opacity: 0.8; transition: opacity 0.3s ease;}
   :focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
   :focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
   :focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
