@@ -142,7 +142,7 @@ class RegForm extends Component {
             to='/auth/login'>I have an account</StyledLink>
           <StyledLink
             styledcolor='orange'
-            to='/main'>skip >></StyledLink>
+            to='/main'>Later</StyledLink>
         </Form>
       </div>
     )

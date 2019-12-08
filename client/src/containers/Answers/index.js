@@ -26,8 +26,8 @@ class Answers extends Component {
           <li>
             <AnswerWrap>
               <DeleteButton>&#10006;</DeleteButton>
-              <Question>????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????</Question>
-              <Answer>I am 18 years old!!!!! ASDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDASDASDASDS</Answer>
+              <Question>How much can you be lazy to get tired of this too?)</Question>
+              <Answer>One day</Answer>
               <Info>21.01.2019 Sunday, 19:03</Info>
             </AnswerWrap>
           </li>
@@ -35,8 +35,8 @@ class Answers extends Component {
           <li>
             <AnswerWrap>
               <DeleteButton>&#10006;</DeleteButton>
-              <Question>NO????</Question>
-              <Answer>No.</Answer>
+              <Question>How do you spend your free time?</Question>
+              <Answer>Over a cup of tea</Answer>
               <Info>21.01.2019 Sunday, 19:01</Info>
             </AnswerWrap>
           </li>
@@ -44,8 +44,8 @@ class Answers extends Component {
           <li>
             <AnswerWrap>
               <DeleteButton>&#10006;</DeleteButton>
-              <Question>Know Dmitriy??</Question>
-              <Answer>What? It's a first time i hear about Dmitriy...</Answer>
+              <Question>Which artists do you listen to music?</Question>
+              <Answer>Pink Floyd.</Answer>
               <Info>21.01.2019 Sunday, 15:05</Info>
             </AnswerWrap>
           </li>
@@ -53,8 +53,8 @@ class Answers extends Component {
           <li>
             <AnswerWrap>
               <DeleteButton>&#10006;</DeleteButton>
-              <Question>Do you have a pet???????</Question>
-              <Answer>Yeah, its a frozen CAT!!! Ahahahah :) </Answer>
+              <Question>Do you have any pets at home?</Question>
+              <Answer>I have a cat</Answer>
               <Info>21.01.2019 Sunday, 15:03</Info>
             </AnswerWrap>
           </li>
@@ -62,55 +62,8 @@ class Answers extends Component {
           <li>
             <AnswerWrap>
               <DeleteButton>&#10006;</DeleteButton>
-              <Question>Do you have a pet???????</Question>
-              <Answer>eah, its a frozeASDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-                n CAT!!! Ahahahah :)
-                sanss &U+000D
-                sans
-                a7e4a9
-            </Answer>
-              <Info>21.01.2019 Sunday, 15:03</Info>
-            </AnswerWrap>
-          </li>
-
-          <li>
-            <AnswerWrap>
-              <DeleteButton>&#10006;</DeleteButton>
-              <Question>Do you have a pet???????</Question>
-              <Answer>eah, its a frozeASDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-                n CAT!!! Ahahahah :)
-                sanss &U+000D
-                sans
-                a7e4a9
-            </Answer>
-              <Info>21.01.2019 Sunday, 15:03</Info>
-            </AnswerWrap>
-          </li>
-
-          <li>
-            <AnswerWrap>
-              <DeleteButton>&#10006;</DeleteButton>
-              <Question>Do you have a pet???????</Question>
-              <Answer>eah, its a frozeASDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-                n CAT!!! Ahahahah :)
-                sanss &U+000D
-                sans
-                a7e4a9
-            </Answer>
-              <Info>21.01.2019 Sunday, 15:03</Info>
-            </AnswerWrap>
-          </li>
-
-          <li>
-            <AnswerWrap>
-              <DeleteButton>&#10006;</DeleteButton>
-              <Question>Do you have a pet???????</Question>
-              <Answer>eah, its a frozeASDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-                n CAT!!! Ahahahah :)
-                sanss &U+000D
-                sans
-                a7e4a9
-            </Answer>
+              <Question>Is it easy to meet you, start chatting?</Question>
+              <Answer>Yeah</Answer>
               <Info>21.01.2019 Sunday, 15:03</Info>
             </AnswerWrap>
           </li>

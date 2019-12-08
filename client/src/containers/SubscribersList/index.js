@@ -38,35 +38,22 @@ class SubscribersList extends Component {
         <li>
           <Person to='/main/user'>
             <Photo src={require("../../media/img/Ura.jpg")} alt='name' />
-            <Name>Yuriy Tolstikhin</Name>
+            <Name>Yury Tolstihin</Name>
           </Person>
         </li>
 
-        <li>
-          <Person to='/main/user'>
-            <Photo src={require("../../media/img/Mark.jpg")} alt='name' />
-            <Name>Mark Smirnov</Name>
-          </Person>
-        </li>
-
-        <li>
-          <Person to='/main/user'>
-            <Photo src={require("../../media/img/Luk.jpg")} alt='name' />
-            <Name>Maxim Luckyanchuk</Name>
-          </Person>
-        </li>
 
         <li>
           <Person to='/main/user'>
             <Photo src={require("../../media/img/Hon.jpg")} alt='name' />
-            <Name>Alexandr Khon</Name>
+            <Name>Alexander Khon</Name>
           </Person>
         </li>
 
         <li>
           <Person to='/main/user'>
             <Photo src={require("../../media/img/Danya.jpg")} alt='name' />
-            <Name>Danya Malishev</Name>
+            <Name>Danil Malishev</Name>
           </Person>
         </li>
 
